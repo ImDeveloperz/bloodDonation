@@ -1,0 +1,382 @@
+question,intent
+"Hello, I'd like to inquire about blood donation",StartConversation
+"Hi, I want info about donating blood",StartConversation
+"Hello, it's my first time donating blood",StartConversation
+"Good morning, questions about blood donation",StartConversation
+"Hi, I want to know more about donating blood",StartConversation
+"Hello, can you help me with blood donation?",StartConversation
+"Hey there, interested in donating blood",StartConversation
+"Hello, I want to learn about blood donation",StartConversation
+"Hey, tell me about giving blood?",StartConversation
+"Need help with blood donation info",StartConversation
+"Good afternoon, looking for blood donation information",StartConversation
+"Hi there, could you tell me about blood donation please?",StartConversation
+"Hello, I'm considering donating blood",StartConversation
+"Hey, I need information about giving blood",StartConversation
+"Greetings, can you provide details about blood donation?",StartConversation
+"Hello, I'm thinking about donating blood for the first time",StartConversation
+"Hi, I'd like to discuss blood donation options",StartConversation
+"Hello there, seeking information on blood donation process",StartConversation
+"I'm here to ask about donating blood",StartConversation
+"Hi, can you assist with blood donation questions?",StartConversation
+"Thank you for the information, goodbye",EndConversation
+"That's all I wanted to know, thanks",EndConversation
+"Thank you for your help, have a nice day",EndConversation
+"I have all the information I needed, thanks",EndConversation
+"I appreciate your answers, see you soon",EndConversation
+"Perfect, thank you, goodbye",EndConversation
+"Thanks for your help, bye",EndConversation
+"That's all, thank you",EndConversation
+"Ok thanks, have a good day",EndConversation
+"Got it, thanks for answering, goodbye",EndConversation
+"Thank you so much for explaining everything",EndConversation
+"That clears up my questions, thank you and goodbye",EndConversation
+"I understand now, thanks for your time",EndConversation
+"This was very helpful, goodbye now",EndConversation
+"You've answered everything, thank you",EndConversation
+"Thanks for all the details, bye for now",EndConversation
+"I think that covers everything, thanks a lot",EndConversation
+"Thank you for being so informative, goodbye",EndConversation
+"Great information, thanks and have a good day",EndConversation
+"I'm all set now, thank you and goodbye",EndConversation
+"How many times a year can I donate blood?",AnnualDonationFrequency
+"Maximum blood donations per year?",AnnualDonationFrequency
+"How often can I donate blood yearly?",AnnualDonationFrequency
+"How many donations per year?",AnnualDonationFrequency
+"Is there a limit to yearly donations?",AnnualDonationFrequency
+"Can I donate blood every month?",AnnualDonationFrequency
+"How many times a year to donate?",AnnualDonationFrequency
+"Yearly limit for blood donations?",AnnualDonationFrequency
+"Can I give blood every few weeks?",AnnualDonationFrequency
+"Maximum times to donate annually?",AnnualDonationFrequency
+"What's the annual limit for blood donation?",AnnualDonationFrequency
+"How frequently can I donate throughout the year?",AnnualDonationFrequency
+"Is there a maximum number of donations per year?",AnnualDonationFrequency
+"What's the recommended number of donations annually?",AnnualDonationFrequency
+"How many blood donations are allowed in 12 months?",AnnualDonationFrequency
+"Can I donate blood multiple times a year?",AnnualDonationFrequency
+"What's the yearly frequency for blood donation?",AnnualDonationFrequency
+"How many annual blood donations are safe?",AnnualDonationFrequency
+"What's the maximum donation frequency per year?",AnnualDonationFrequency
+"Is there a yearly cap on blood donations?",AnnualDonationFrequency
+"Can I drive after giving blood?",DrivingAfterDonation
+"Can I drive after blood donation?",DrivingAfterDonation
+"Wait time before driving after donation?",DrivingAfterDonation
+"Is driving after donation dangerous?",DrivingAfterDonation
+"Restrictions for driving after donation?",DrivingAfterDonation
+"Will I be too weak to drive?",DrivingAfterDonation
+"Can I drive home after donating?",DrivingAfterDonation
+"Safe to drive after giving blood?",DrivingAfterDonation
+"How long before I can drive?",DrivingAfterDonation
+"Should someone drive me after donating?",DrivingAfterDonation
+"Is it okay to drive myself after donating blood?",DrivingAfterDonation
+"Do I need someone to drive me home after blood donation?",DrivingAfterDonation
+"How soon after donation can I drive a vehicle?",DrivingAfterDonation
+"Are there driving restrictions following blood donation?",DrivingAfterDonation
+"Is driving immediately after donating blood safe?",DrivingAfterDonation
+"Do donors need a ride after giving blood?",DrivingAfterDonation
+"Does blood donation affect driving ability?",DrivingAfterDonation
+"What's the recommended waiting period before driving post-donation?",DrivingAfterDonation
+"Should I avoid driving after giving blood?",DrivingAfterDonation
+"Is it safe to operate a vehicle after blood donation?",DrivingAfterDonation
+"Side effects after donation?",DonationPain
+"Does blood donation hurt?",DonationPain
+"Will I feel pain during donation?",DonationPain
+"What discomforts after donating?",DonationPain
+"Is blood donation painful?",DonationPain
+"Does the needle hurt?",DonationPain
+"Is donating blood painful?",DonationPain
+"Will it hurt when needle goes in?",DonationPain
+"Do people feel pain when donating?",DonationPain
+"How much does donation hurt?",DonationPain
+"Is there any pain involved in blood donation?",DonationPain
+"How painful is the blood donation process?",DonationPain
+"Does giving blood cause discomfort?",DonationPain
+"What kind of pain should I expect during donation?",DonationPain
+"Is there much pain when donating blood?",DonationPain
+"How uncomfortable is the needle during donation?",DonationPain
+"Will I experience pain throughout the donation?",DonationPain
+"Is the blood donation procedure painful?",DonationPain
+"How much discomfort is normal during blood donation?",DonationPain
+"Does extracting blood for donation hurt?",DonationPain
+"What precautions before donating?",PrecautionsBeforeDonation
+"How to prepare for donation?",PrecautionsBeforeDonation
+"What to do before donating?",PrecautionsBeforeDonation
+"Any recommendations before donating?",PrecautionsBeforeDonation
+"Advice for day before donation?",PrecautionsBeforeDonation
+"How to prepare my body for donation?",PrecautionsBeforeDonation
+"What to do night before donating?",PrecautionsBeforeDonation
+"How to prepare for donation?",PrecautionsBeforeDonation
+"Best ways to prepare for donation?",PrecautionsBeforeDonation
+"Special precautions before donating?",PrecautionsBeforeDonation
+"What should I do to prepare for blood donation?",PrecautionsBeforeDonation
+"What preparation is needed before donating blood?",PrecautionsBeforeDonation
+"Are there specific steps to take before donating blood?",PrecautionsBeforeDonation
+"How should I get ready for my blood donation?",PrecautionsBeforeDonation
+"What are important preparations before giving blood?",PrecautionsBeforeDonation
+"What precautionary measures before blood donation?",PrecautionsBeforeDonation
+"Things to consider before my donation appointment?",PrecautionsBeforeDonation
+"How can I properly prepare for giving blood?",PrecautionsBeforeDonation
+"What's the proper preparation for blood donation?",PrecautionsBeforeDonation
+"What should I be mindful of before donating blood?",PrecautionsBeforeDonation
+"When does donation center open?",DonationHours
+"Opening hours of donation centers?",DonationHours
+"Until what time can I donate?",DonationHours
+"When can I come to donate?",DonationHours
+"Is donation center open weekends?",DonationHours
+"Blood collection hours nearby?",DonationHours
+"When do blood centers close?",DonationHours
+"Open on public holidays?",DonationHours
+"When is center open for donations?",DonationHours
+"Do you accept donors after 5pm?",DonationHours
+"What are the operating hours of the blood donation center?",DonationHours
+"What time does the blood donation facility open and close?",DonationHours
+"What are the blood center's business hours?",DonationHours
+"During what hours can I donate blood?",DonationHours
+"Are blood donation services available on Sundays?",DonationHours
+"What are the donation center's weekend hours?",DonationHours
+"What time should I arrive to donate blood?",DonationHours
+"Are there evening hours for blood donation?",DonationHours
+"What days of the week is the donation center operating?",DonationHours
+"Do blood donation centers have flexible hours?",DonationHours
+"Can I eat before donating?",EatingBeforeDonation
+"Should I fast before donating?",EatingBeforeDonation
+"What should I eat before donating?",EatingBeforeDonation
+"Drink water before donating?",EatingBeforeDonation
+"Foods to avoid before donation?",EatingBeforeDonation
+"How to eat before donating?",EatingBeforeDonation
+"Can I have coffee before donating?",EatingBeforeDonation
+"Avoid alcohol before donating?",EatingBeforeDonation
+"Eat breakfast before morning donation?",EatingBeforeDonation
+"What foods help with donation?",EatingBeforeDonation
+"Is it necessary to eat before donating blood?",EatingBeforeDonation
+"What dietary recommendations before blood donation?",EatingBeforeDonation
+"Should I drink extra fluids before donating blood?",EatingBeforeDonation
+"Is it okay to eat a full meal before blood donation?",EatingBeforeDonation
+"How many hours before donation should I eat?",EatingBeforeDonation
+"What nutrition helps prepare for blood donation?",EatingBeforeDonation
+"Are there food restrictions before donating blood?",EatingBeforeDonation
+"Should I increase iron intake before donating?",EatingBeforeDonation
+"Is it better to donate blood on empty stomach?",EatingBeforeDonation
+"What hydration guidelines before blood donation?",EatingBeforeDonation
+"When can I donate again?",DonationFrequency
+"Wait time between donations?",DonationFrequency
+"Minimum time between donations?",DonationFrequency
+"After how many days to donate again?",DonationFrequency
+"Waiting period between donations?",DonationFrequency
+"How often can I donate safely?",DonationFrequency
+"How long till I donate again?",DonationFrequency
+"When safe to donate after last time?",DonationFrequency
+"Wait period between donations?",DonationFrequency
+"Can I donate twice in one month?",DonationFrequency
+"How much time must pass between blood donations?",DonationFrequency
+"What's the required interval between donations?",DonationFrequency
+"How frequently is it safe to donate blood?",DonationFrequency
+"What's the minimum days between blood donations?",DonationFrequency
+"How long should I wait before donating again?",DonationFrequency
+"What's the recommended gap between donations?",DonationFrequency
+"Is there a mandatory waiting period between donations?",DonationFrequency
+"How many weeks between blood donations?",DonationFrequency
+"What's the standard interval between blood donations?",DonationFrequency
+"How often can healthy donors give blood?",DonationFrequency
+"How long does donation take?",DonationDuration
+"Total duration of donation?",DonationDuration
+"Minutes to plan for donation?",DonationDuration
+"Is donation process long?",DonationDuration
+"How long at the center?",DonationDuration
+"Average time for donation?",DonationDuration
+"How long does whole process take?",DonationDuration
+"Time needed for giving blood?",DonationDuration
+"Is donation quick or slow?",DonationDuration
+"How long from start to finish?",DonationDuration
+"What's the total time commitment for blood donation?",DonationDuration
+"How much time should I set aside for donating?",DonationDuration
+"What's the typical duration of a blood donation visit?",DonationDuration
+"How many minutes does the actual blood draw take?",DonationDuration
+"How long does the entire donation process last?",DonationDuration
+"What's the time investment for donating blood?",DonationDuration
+"How much time should I allocate for blood donation?",DonationDuration
+"Is blood donation a quick process or time-consuming?",DonationDuration
+"How long will I be at the donation center?",DonationDuration
+"What's the expected time frame for the donation process?",DonationDuration
+"Tests on blood after donation?",BloodTests
+"How is blood analyzed?",BloodTests
+"What diseases do you check for?",BloodTests
+"Do you test blood type each time?",BloodTests
+"What analysis on donor blood?",BloodTests
+"How do you ensure blood safety?",BloodTests
+"Do you test for all diseases?",BloodTests
+"What screening on donated blood?",BloodTests
+"Will I learn my blood type?",BloodTests
+"Tests for rare conditions?",BloodTests
+"What tests are performed on my donated blood?",BloodTests
+"How is donated blood screened for safety?",BloodTests
+"What health conditions do you test for in donated blood?",BloodTests
+"Do you test for infectious diseases in donated blood?",BloodTests
+"Is my blood analyzed for specific markers?",BloodTests
+"What lab procedures are done on donated blood?",BloodTests
+"How extensive is the testing on donated blood?",BloodTests
+"Can I get test results from my blood donation?",BloodTests
+"What blood safety protocols are in place?",BloodTests
+"What kind of quality control tests are done on donations?",BloodTests
+"What if I feel unwell after donating?",DizzinessAfterDonation
+"What to do if dizzy after donation?",DizzinessAfterDonation
+"Lightheaded after donation - normal?",DizzinessAfterDonation
+"Concerning symptoms after donation?",DizzinessAfterDonation
+"Feel weak after donation - what to do?",DizzinessAfterDonation
+"How to avoid fainting after donating?",DizzinessAfterDonation
+"What if I get dizzy after?",DizzinessAfterDonation
+"How to prevent fainting?",DizzinessAfterDonation
+"Is nausea after donation normal?",DizzinessAfterDonation
+"Experiencing dizziness after donating!",DizzinessAfterDonation
+"What should I do if I feel faint after donating blood?",DizzinessAfterDonation
+"Is it normal to feel woozy after blood donation?",DizzinessAfterDonation
+"How to handle lightheadedness following donation?",DizzinessAfterDonation
+"What causes dizziness after giving blood?",DizzinessAfterDonation
+"Should I be concerned about feeling weak after donation?",DizzinessAfterDonation
+"What are the signs of a bad reaction after donating?",DizzinessAfterDonation
+"How to recover from dizziness after blood donation?",DizzinessAfterDonation
+"What if I almost faint after donating blood?",DizzinessAfterDonation
+"Is feeling unsteady after donation an emergency?",DizzinessAfterDonation
+"What remedies for post-donation wooziness?",DizzinessAfterDonation
+"Can I donate while pregnant?",PregnancyBreastfeedingDonation
+"Donation while breastfeeding?",PregnancyBreastfeedingDonation
+"When to donate after birth?",PregnancyBreastfeedingDonation
+"Donation during pregnancy safe?",PregnancyBreastfeedingDonation
+"Can breastfeeding women donate?",PregnancyBreastfeedingDonation
+"How long after birth to donate?",PregnancyBreastfeedingDonation
+"Pregnant - can I still donate?",PregnancyBreastfeedingDonation
+"Safe to donate while breastfeeding?",PregnancyBreastfeedingDonation
+"After C-section when to donate?",PregnancyBreastfeedingDonation
+"Risks to baby if I donate?",PregnancyBreastfeedingDonation
+"Is blood donation allowed during pregnancy?",PregnancyBreastfeedingDonation
+"Can a nursing mother donate blood safely?",PregnancyBreastfeedingDonation
+"Are there risks in donating while pregnant?",PregnancyBreastfeedingDonation
+"How long postpartum before donating blood?",PregnancyBreastfeedingDonation
+"Does blood donation affect breast milk?",PregnancyBreastfeedingDonation
+"Is there a waiting period after pregnancy for donation?",PregnancyBreastfeedingDonation
+"Can I donate blood in my first trimester?",PregnancyBreastfeedingDonation
+"Will donating affect my unborn baby?",PregnancyBreastfeedingDonation
+"Are lactating women eligible for blood donation?",PregnancyBreastfeedingDonation
+"What are the guidelines for donation after childbirth?",PregnancyBreastfeedingDonation
+"Which medications affect donation?",MedicationsDonation
+"Can I donate on antibiotics?",MedicationsDonation
+"Do painkillers prevent donation?",MedicationsDonation
+"Birth control and donation?",MedicationsDonation
+"Treatments incompatible with donation?",MedicationsDonation
+"Can I donate on chronic medication?",MedicationsDonation
+"Blood pressure meds and donation?",MedicationsDonation
+"Antidepressants affect donation?",MedicationsDonation
+"Took aspirin - can I donate?",MedicationsDonation
+"Insulin and blood donation?",MedicationsDonation
+"What medications disqualify me from donating blood?",MedicationsDonation
+"Is it safe to donate while taking prescription drugs?",MedicationsDonation
+"Do my current medications prevent blood donation?",MedicationsDonation
+"How do medications impact blood donation eligibility?",MedicationsDonation
+"Can I donate if I'm taking heart medications?",MedicationsDonation
+"Are there medication restrictions for blood donors?",MedicationsDonation
+"Does taking daily medication affect my ability to donate?",MedicationsDonation
+"Which prescription drugs are prohibited for blood donors?",MedicationsDonation
+"Can I donate while on allergy medication?",MedicationsDonation
+"Do I need to stop my medications before donating?",MedicationsDonation
+"Requirements for blood donation?",DonationRequirements
+"Who can be a donor?",DonationRequirements
+"Criteria for donating blood?",DonationRequirements
+"Age limits for blood donation?",DonationRequirements
+"Contraindications for donation?",DonationRequirements
+"Can I donate with a recent tattoo?",DonationRequirements
+"Too young at 16 to donate?",DonationRequirements
+"Can I donate with high cholesterol?",DonationRequirements
+"What disqualifies from donating?",DonationRequirements
+"Weight requirements for donors?",DonationRequirements
+"What are the eligibility criteria for blood donors?",DonationRequirements
+"What health conditions prevent blood donation?",DonationRequirements
+"What are the minimum requirements to donate blood?",DonationRequirements
+"Am I eligible to donate with my medical history?",DonationRequirements
+"What's the minimum age requirement for blood donors?",DonationRequirements
+"Can someone with diabetes donate blood?",DonationRequirements
+"Are there hemoglobin requirements for donation?",DonationRequirements
+"What medical conditions disqualify blood donors?",DonationRequirements
+"Do I meet the physical requirements to donate?",DonationRequirements
+"What are the health criteria for blood donation?",DonationRequirements
+"Procedures before donating?",BloodDonationProcedure
+"How to donate ?",BloodDonationProcedure
+"Steps of blood donation?",BloodDonationProcedure
+"I want to donate blood",BloodDonationProcedure
+"How does reception work?",BloodDonationProcedure
+"First visit to donate - what to do?",BloodDonationProcedure
+"Process of blood donation?",BloodDonationProcedure
+"What happens at blood center?",BloodDonationProcedure
+"Donation process step by step?",BloodDonationProcedure
+"Paperwork before donating?",BloodDonationProcedure
+"Registration for new donors?",BloodDonationProcedure
+"What is the complete blood donation process?",BloodDonationProcedure
+"What happens from arrival to completion at donation?",BloodDonationProcedure
+"Can you explain the blood donation procedure?",BloodDonationProcedure
+"What to expect during my first blood donation?",BloodDonationProcedure
+"How is blood collected during donation?",BloodDonationProcedure
+"What are all the steps involved in giving blood?",BloodDonationProcedure
+"What's the protocol for blood donation visits?",BloodDonationProcedure
+"What's the full procedure for donating blood?",BloodDonationProcedure
+"How does the blood collection process work?",BloodDonationProcedure
+"What screening happens before blood donation?",BloodDonationProcedure
+"Most requested blood type?",BloodUsage
+"What is donated blood used for?",BloodUsage
+"How will my blood be used?",BloodUsage
+"Which blood groups needed most?",BloodUsage
+"Who gets blood donations?",BloodUsage
+"Why do hospitals need blood?",BloodUsage
+"Is type O in high demand?",BloodUsage
+"What do they use blood for?",BloodUsage
+"How many patients per donation?",BloodUsage
+"Most valuable blood types?",BloodUsage
+"What medical treatments require donated blood?",BloodUsage
+"Where does my donated blood end up?",BloodUsage
+"Which patients benefit from blood donations?",BloodUsage
+"What medical procedures use donated blood?",BloodUsage
+"How is my blood separated and used?",BloodUsage
+"What components of blood are most needed?",BloodUsage
+"How many lives can one donation save?",BloodUsage
+"What's the current blood supply situation?",BloodUsage
+"Which hospitals receive donated blood?",BloodUsage
+"What emergencies require blood donations?",BloodUsage
+"Nearest donation center?",DonationLocation
+"Blood centers in my city?",DonationLocation
+"How to find donation center?",DonationLocation
+"Mobile blood units nearby?",DonationLocation
+"Where are blood drives held?",DonationLocation
+"Donation center at hospital?",DonationLocation
+"Where to donate in this area?",DonationLocation
+"Closest place to donate?",DonationLocation
+"Centers near public transport?",DonationLocation
+"Donation locations this week?",DonationLocation
+"Where can I find the closest blood donation facility?",DonationLocation
+"What are the blood donation locations in this region?",DonationLocation
+"How do I locate a convenient donation center?",DonationLocation
+"Is there a blood donation site near me?",DonationLocation
+"Where is the main blood donation center located?",DonationLocation
+"Are there any upcoming blood drives in my neighborhood?",DonationLocation
+"Which hospitals accept direct blood donations?",DonationLocation
+"What's the address of the nearest donation facility?",DonationLocation
+"How far is the closest blood donation center?",DonationLocation
+"Are there donation centers in shopping areas?",DonationLocation
+"Can I do sports after donating?",ExerciseAfterDonation
+"When to resume exercise?",ExerciseAfterDonation
+"Donation affect athletic performance?",ExerciseAfterDonation
+"Gym after donation?",ExerciseAfterDonation
+"Exercise after donation dangerous?",ExerciseAfterDonation
+"When to resume running?",ExerciseAfterDonation
+"Can I jog after donating today?",ExerciseAfterDonation
+"When can I lift weights again?",ExerciseAfterDonation
+"Swimming after donation?",ExerciseAfterDonation
+"Will exercise after cause problems?",ExerciseAfterDonation
+"How long should I wait before exercising after donation?",ExerciseAfterDonation
+"Is it safe to work out after giving blood?",ExerciseAfterDonation
+"Can I go to the gym the same day as blood donation?",ExerciseAfterDonation
+"What physical activities should I avoid after donating?",ExerciseAfterDonation
+"Will blood donation impact my workout routine?",ExerciseAfterDonation
+"Is strenuous activity safe after donating blood?",ExerciseAfterDonation
+"Are there exercise restrictions following blood donation?",ExerciseAfterDonation
+"Can I play sports the day after donating blood?",ExerciseAfterDonation
+"How does donation affect physical performance?",ExerciseAfterDonation
+"What's the recommended waiting period before intense exercise?",ExerciseAfterDonation
