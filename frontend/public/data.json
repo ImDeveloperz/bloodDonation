@@ -1,0 +1,1156 @@
+{
+    "regions": [
+    {
+        "region": "Tanger-Tetouan-Al Hoceima",
+        "delegations": [
+          {
+            "delegation": "Al Hoceima",
+            "communes": [
+              {
+                "commune": "Al Hoceima (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              },
+              {
+                "commune": "Imzouren (Mun.)",
+                "hopitaux": [
+                  "Hôpital Imzouren"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Chefchaouen",
+            "communes": [
+              {
+                "commune": "Chefchaouen (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Larache",
+            "communes": [
+              {
+                "commune": "Ksar El Kebir (Mun.)",
+                "hopitaux": [
+                  "Hôpital Ksar El Kebir"
+                ]
+              },
+              {
+                "commune": "Larache (Mun.)",
+                "hopitaux": [
+                  "Hôpital Lalla Meriem"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Ouzzane",
+            "communes": [
+              {
+                "commune": "Ouezzane (Mun.)",
+                "hopitaux": [
+                  "Hôpital Abou Kacem Zahraoui"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tanger Assilah",
+            "communes": [
+              {
+                "commune": "Assilah",
+                "hopitaux": [
+                  "Hôpital Assilah"
+                ]
+              },
+              {
+                "commune": "Bni Makada (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mohammed VI"
+                ]
+              },
+              {
+                "commune": "Al Madina (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V",
+                  "Hôpital Al Kortobi",
+                  "Hôpital Duc De Tovar"
+                ]
+              },
+              {
+                "commune": "Gueznaia (Mun.)",
+                "hopitaux": [
+                  "Hôpital des spécialités Mohamed VI"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tetouan",
+            "communes": [
+              {
+                "commune": "Tétouan (Mun.)",
+                "hopitaux": [
+                  "Hôpital Civil"
+                ]
+              },
+              {
+                "commune": "Dar Bni Karrich",
+                "hopitaux": [
+                  "Hôpital Ben Karrich"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Mdiq-Fnideq",
+            "communes": [
+              {
+                "commune": "Fnideq (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              },
+              {
+                "commune": "M'Diq (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohammed VI"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Oriental",
+        "delegations": [
+          {
+            "delegation": "Berkane",
+            "communes": [
+              {
+                "commune": "Berkane (Mun.)",
+                "hopitaux": [
+                  "Hôpital Edderak"
+                ]
+              },
+              {
+                "commune": "Saidia (Mun.)",
+                "hopitaux": [
+                  "Hôpital Saidia"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Driouch",
+            "communes": [
+              {
+                "commune": "Driouch (Mun.)",
+                "hopitaux": [
+                  "Hôpital Driouch"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Figuig",
+            "communes": [
+              {
+                "commune": "Bouarfa (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Guersif",
+            "communes": [
+              {
+                "commune": "Guercif (Mun.)",
+                "hopitaux": [
+                  "Hôpital Guercif"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Jerada",
+            "communes": [
+              {
+                "commune": "Laaouinate",
+                "hopitaux": [
+                  "Hôpital Jrada"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Nador",
+            "communes": [
+              {
+                "commune": "Al Aaroui (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohammed VI"
+                ]
+              },
+              {
+                "commune": "Nador (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassani"
+                ]
+              },
+              {
+                "commune": "Zaio (Mun.)",
+                "hopitaux": [
+                  "Hôpital Zaio"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Oujda Angad",
+            "communes": [
+              {
+                "commune": "Oujda (Mun.)",
+                "hopitaux": [
+                  "Hôpital Al Farabi",
+                  "Hôpital des Spécialités"
+                ]
+              },
+              {
+                "commune": "Sidi Moussa Lemhaya",
+                "hopitaux": [
+                  "Centre d'oncoligie Hassan II"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Taourirt",
+            "communes": [
+              {
+                "commune": "El Aioun Sidi Mellouk (Mun.)",
+                "hopitaux": [
+                  "Hôpital El Aioun Sidi Mellouk"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Fès-Meknès",
+        "delegations": [
+          {
+            "delegation": "Meknes",
+            "communes": [
+              {
+                "commune": "Meknès (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Said",
+                  "Hôpital Mohamed V",
+                  "Hôpital Pagnon",
+                  "Hôpital Moulay Ismail"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Boulemane",
+            "communes": [
+              {
+                "commune": "Missour (Mun.)",
+                "hopitaux": [
+                  "Hôpital Marche Verte"
+                ]
+              },
+              {
+                "commune": "Outat El Haj (Mun.)",
+                "hopitaux": [
+                  "Hôpital S. Ahmed B. Driss Missouri"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "El Hajeb",
+            "communes": [
+              {
+                "commune": "El Hajeb (Mun.)",
+                "hopitaux": [
+                  "Hôpital Prince My Hassan"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Fes",
+            "communes": [
+              {
+                "commune": "Agdal (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Al Ghassani",
+                  "Hôpital Ibn Al Baitar"
+                ]
+              },
+              {
+                "commune": "Saiss (Arrond.)",
+                "hopitaux": [
+                  "Hôpital des spécialités"
+                ]
+              },
+              {
+                "commune": "Fès-Médina (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Omar Drissi"
+                ]
+              },
+              {
+                "commune": "El Mariniyine (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Ibn Al Hassan"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Ifrane",
+            "communes": [
+              {
+                "commune": "Azrou (Mun.)",
+                "hopitaux": [
+                  "Hôpital 20 Aout (Azrou)"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sefrou",
+            "communes": [
+              {
+                "commune": "Sefrou (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Taounate",
+            "communes": [
+              {
+                "commune": "Ghafsai (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              },
+              {
+                "commune": "Taounate (Mun.)",
+                "hopitaux": [
+                  "Hôpital Taounate"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Taza",
+            "communes": [
+              {
+                "commune": "Taza (Mun.)",
+                "hopitaux": [
+                  "Hôpital Ibn Baja"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Rabat-Salé-Kénitra",
+        "delegations": [
+          {
+            "delegation": "Kenitra",
+            "communes": [
+              {
+                "commune": "Kénitra (Mun.)",
+                "hopitaux": [
+                  "Hôpital Al Idrissi"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Khemisset",
+            "communes": [
+              {
+                "commune": "Khémisset (Mun.)",
+                "hopitaux": [
+                  "Hôpital Khémisset"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Rabat",
+            "communes": [
+              {
+                "commune": "Agdal Riyad (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Ibs Sina",
+                  "Hôpital Des Spécialités",
+                  "Maternité Souissi",
+                  "Hôpital Med Ben Abdellah"
+                ]
+              },
+              {
+                "commune": "Hassan (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Moulay Youssef"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Salé",
+            "communes": [
+              {
+                "commune": "Bab Lamrissa (Arrond.)",
+                "hopitaux": [
+                  "Hôpital El Ayachi"
+                ]
+              },
+              {
+                "commune": "Hssaine (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Moulay Abdellah (Hôp.préféctoral)"
+                ]
+              },
+              {
+                "commune": "Tabriquet (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Arrazi"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sidi kacem",
+            "communes": [
+              {
+                "commune": "Sidi Kacem (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Kacem"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sidi Slimane",
+            "communes": [
+              {
+                "commune": "Sidi Slimane (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Slimane"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Skhirate-Temara",
+            "communes": [
+              {
+                "commune": "Témara (Mun.)",
+                "hopitaux": [
+                  "Hôpital Princesse Lalla Aicha"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Béni Mellal-Khénifra",
+        "delegations": [
+          {
+            "delegation": "Azilal",
+            "communes": [
+              {
+                "commune": "Azilal (Mun.)",
+                "hopitaux": [
+                  "Hôpital Haut Atlas Central"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Béni Mellal",
+            "communes": [
+              {
+                "commune": "Béni Mellal (Mun.)",
+                "hopitaux": [
+                  "Hôpital Beni Mellal"
+                ]
+              },
+              {
+                "commune": "Kasba Tadla (Mun.)",
+                "hopitaux": [
+                  "Hôpital Moulay Ismail"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Fkih Ben Saleh",
+            "communes": [
+              {
+                "commune": "Fquih Ben Salah (Mun.)",
+                "hopitaux": [
+                  "Hôpital Fquih Ben Salah"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Khenifra",
+            "communes": [
+              {
+                "commune": "Khenifra (Mun.)",
+                "hopitaux": [
+                  "Hôpital Khenifra"
+                ]
+              },
+              {
+                "commune": "Bejaad (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed VI"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Khouribga",
+            "communes": [
+              {
+                "commune": "Khouribga (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              },
+              {
+                "commune": "Oued Zem (Mun.)",
+                "hopitaux": [
+                  "Hôpital Oued Zem"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Casablanca-Settat",
+        "delegations": [
+          {
+            "delegation": "Benslimane",
+            "communes": [
+              {
+                "commune": "Benslimane (Mun.)",
+                "hopitaux": [
+                  "Hôpital Benslimane (Hassan II)"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Berrechid",
+            "communes": [
+              {
+                "commune": "Berrechid (Mun.)",
+                "hopitaux": [
+                  "Hôpital Berrechid"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "El Jadida",
+            "communes": [
+              {
+                "commune": "El Jadida (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              },
+              {
+                "commune": "Azemmour",
+                "hopitaux": [
+                  "Hôpital Azemmour"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Mediouna",
+            "communes": [
+              {
+                "commune": "Mediouna (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mediouna"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Mohammedia",
+            "communes": [
+              {
+                "commune": "Mohammedia (Mun.)",
+                "hopitaux": [
+                  "Hôpital My Abdellah"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Nouacer",
+            "communes": [
+              {
+                "commune": "Bouskoura (Mun.)",
+                "hopitaux": [
+                  "Hôpital Bouskoura"
+                ]
+              },
+              {
+                "commune": "Dar Bouazza (Mun.)",
+                "hopitaux": [
+                  "Hôpital Prince My Hassan"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Settat",
+            "communes": [
+              {
+                "commune": "Settat (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sidi Bennour",
+            "communes": [
+              {
+                "commune": "Sidi Bennour (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Bennour"
+                ]
+              },
+              {
+                "commune": "Zemamra (Mun.)",
+                "hopitaux": [
+                  "Hôpital Zmamra"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Casablanca Anfa",
+            "communes": [
+              {
+                "commune": "El Maarif (Arrond.)",
+                "hopitaux": [
+                  "Hôpital 20 Aout 1953",
+                  "Hôpital Ibn Rochd"
+                ]
+              },
+              {
+                "commune": "Sidi Belyout (Arrond.)",
+                "hopitaux": [
+                  "Hôpital My Youssef"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Al Fida-Mers Sultan",
+            "communes": [
+              {
+                "commune": "Al-Fida (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mohamed Baouafi"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Aïn Sebaâ-Hay Mohammadi",
+            "communes": [
+              {
+                "commune": "Hay Mohammadi (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Hay Hassani",
+            "communes": [
+              {
+                "commune": "Hay-Hassani (Arrond.)",
+                "hopitaux": [
+                  "Hôpital El Hassani"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Aïn Chok",
+            "communes": [
+              {
+                "commune": "Aîn-Chock (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mohamed Sekkat"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sidi Bernoussi",
+            "communes": [
+              {
+                "commune": "Sidi Bernoussi (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Al Mansour"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Ben Msick",
+            "communes": [
+              {
+                "commune": "Ben M'Sick (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Ben M'Sick"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Moulay Rachid",
+            "communes": [
+              {
+                "commune": "Sidi Othmane (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Sidi Othmane"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Marrakech-Safi",
+        "delegations": [
+          {
+            "delegation": "Al Haouz",
+            "communes": [
+              {
+                "commune": "Tahannaout (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohammed VI"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Chichaoua",
+            "communes": [
+              {
+                "commune": "Chichaoua (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohammed VI"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "El Kelaa Des Sraghna",
+            "communes": [
+              {
+                "commune": "El Kelaâ des Sraghna (Mun.)",
+                "hopitaux": [
+                  "Hôpital Assalama"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Essaouira",
+            "communes": [
+              {
+                "commune": "Essaouira (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Med Ben Abdellah"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Marrakech",
+            "communes": [
+              {
+                "commune": "Gueliz (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Ibn Tofeil",
+                  "Hôpital Ibn Nafis",
+                  "Hôpital Arrazi"
+                ]
+              },
+              {
+                "commune": "Marrakech-Médina (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Ibn Zohr",
+                  "Hôpital El Antaki"
+                ]
+              },
+              {
+                "commune": "Ménara (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Mhamid"
+                ]
+              },
+              {
+                "commune": "Sidi Youssef Ben Ali (Arrond.)",
+                "hopitaux": [
+                  "Hôpital Charifa"
+                ]
+              },
+              {
+                "commune": "Saada",
+                "hopitaux": [
+                  "Hôpital Saada"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Rehamena",
+            "communes": [
+              {
+                "commune": "Ben Guerir (Mun.)",
+                "hopitaux": [
+                  "Hôpital Ben Guerir"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Safi",
+            "communes": [
+              {
+                "commune": "Safi (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mohamed V"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Youssoufia",
+            "communes": [
+              {
+                "commune": "Youssoufia (Mun.)",
+                "hopitaux": [
+                  "Hôpital Lalla Hasna"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Drâa-Tafilalet",
+        "delegations": [
+          {
+            "delegation": "Errachidia",
+            "communes": [
+              {
+                "commune": "Arfoud (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sghiri Houmman I Ben Maati"
+                ]
+              },
+              {
+                "commune": "Errachidia (Mun.)",
+                "hopitaux": [
+                  "Hôpital My Ali Cherif",
+                  "Hôpital Amir Soultan Ibn Abdelaziz"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Midelt",
+            "communes": [
+              {
+                "commune": "Midelt (Mun.)",
+                "hopitaux": [
+                  "Hôpital Midelt"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Ouarzazate",
+            "communes": [
+              {
+                "commune": "Ouarzazate (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Hssain Bencer",
+                  "Hôpital Bougafer"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tinghir",
+            "communes": [
+              {
+                "commune": "Kalaat M'Gouna (Mun.)",
+                "hopitaux": [
+                  "Hôpital HPr Kalaat M'gouna"
+                ]
+              },
+              {
+                "commune": "Tinghir (Mun.)",
+                "hopitaux": [
+                  "Hôpital Tinghir"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Zagora",
+            "communes": [
+              {
+                "commune": "Zagora (Mun.)",
+                "hopitaux": [
+                  "Hôpital Ed-Derrak"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Souss-Massa",
+        "delegations": [
+          {
+            "delegation": "Agadir Ida Ou Tanane",
+            "communes": [
+              {
+                "commune": "Agadir (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Chtouka Ait Baha",
+            "communes": [
+              {
+                "commune": "Biougra (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mokhtar Soussi"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Inezgane Ait Melloul",
+            "communes": [
+              {
+                "commune": "Inezgane (Mun.)",
+                "hopitaux": [
+                  "Hôpital Inezgane"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Taroudant",
+            "communes": [
+              {
+                "commune": "Oulad Teima (Mun.)",
+                "hopitaux": [
+                  "Hôpital Oulad Teima"
+                ]
+              },
+              {
+                "commune": "Taroudannt (Mun.)",
+                "hopitaux": [
+                  "Hôpital Mokhtar Es-Soussi"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tata",
+            "communes": [
+              {
+                "commune": "Tata (Mun.)",
+                "hopitaux": [
+                  "Hôpital Tata"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tiznit",
+            "communes": [
+              {
+                "commune": "Tiznit (Mun.)",
+                "hopitaux": [
+                  "Hôpital Houmman El Fatouaki",
+                  "Hôpital Hassan 1er"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Guelmim-Oued Noun",
+        "delegations": [
+          {
+            "delegation": "Assa-zag",
+            "communes": [
+              {
+                "commune": "Assa (Mun.)",
+                "hopitaux": [
+                  "Hôpital Assa"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Guelmim",
+            "communes": [
+              {
+                "commune": "Bouizakarne (Mun.)",
+                "hopitaux": [
+                  "Hôpital Bouizakaren"
+                ]
+              },
+              {
+                "commune": "Guelmim (Mun.)",
+                "hopitaux": [
+                  "Hôpital Guelmim"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Sidi Ifni",
+            "communes": [
+              {
+                "commune": "Sidi Ifni (Mun.)",
+                "hopitaux": [
+                  "Hôpital Sidi Ifni"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Tan Tan",
+            "communes": [
+              {
+                "commune": "Tan Tan (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Laayoune-Sakia El Hamra",
+        "delegations": [
+          {
+            "delegation": "Boujdour",
+            "communes": [
+              {
+                "commune": "Boujdour (Mun.)",
+                "hopitaux": [
+                  "Hôpital Boujdour"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Es Semara",
+            "communes": [
+              {
+                "commune": "Es-semara (Mun.)",
+                "hopitaux": [
+                  "Hôpital Es-Smara"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Laayoune",
+            "communes": [
+              {
+                "commune": "Laayoune (Mun.)",
+                "hopitaux": [
+                  "Hôpital My Hassan Ben El Mehdi",
+                  "Hôpital Hassan II",
+                  "Hôpital Laayoune"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "region": "Eddakhla-Oued Eddahab",
+        "delegations": [
+          {
+            "delegation": "Oued Ed-Dahab",
+            "communes": [
+              {
+                "commune": "Dakhla (Mun.)",
+                "hopitaux": [
+                  "Hôpital Hassan II"
+                ]
+              }
+            ]
+          },
+          {
+            "delegation": "Aousserd",
+            "communes": [
+              {
+                "commune": "Aousserd (Mun.)",
+                "hopitaux": [
+                  "Hôpital Aousserd"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}
