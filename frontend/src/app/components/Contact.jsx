@@ -18,7 +18,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/contact", {
+      const response = await fetch("https://backendblooddonation.fly.dev/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,13 +1,12 @@
 fastapi
 uvicorn
-pydantic
+pydantic[email]
 firebase-admin
-python-jose  # For JWT (or use PyJWT if you're specifically using that)
+python-jose
 python-dotenv
-smtplib  # (Built-in, no need to include in requirements)
-email  # (Built-in, no need to include)
 numpy
 pandas
 nltk
 scikit-learn
 joblib
+xgboost

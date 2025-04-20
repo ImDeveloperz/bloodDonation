@@ -65,7 +65,7 @@ export default function Hospital({ hospitalName = "Default Hospital" }) {
     };
   
     try {
-      const res = await fetch("http://localhost:8000/donors/add-or-update", {
+      const res = await fetch("https://backendblooddonation.fly.dev/donors/add-or-update", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(donorPayload),
@@ -100,7 +100,7 @@ export default function Hospital({ hospitalName = "Default Hospital" }) {
   
     try {
       // Call the backend API on port 8000 to check and update the frequency
-      const res = await fetch(`http://localhost:8000/donors/${donor.id}/check-donation`, {
+      const res = await fetch(`https://backendblooddonation.fly.dev/donors/${donor.id}/check-donation`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newDonation),

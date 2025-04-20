@@ -81,7 +81,7 @@ const ChatbotLauncher = () => {
     
     try {
       
-      const response = await axios.post("http://localhost:8000/chatboot", {
+      const response = await axios.post("https://backendblooddonation.fly.dev/chatboot", {
         message: message,
       });
       

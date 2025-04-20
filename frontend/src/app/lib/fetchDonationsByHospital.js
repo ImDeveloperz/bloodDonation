@@ -1,6 +1,6 @@
 export async function fetchDonationsByHospital(hospitalName) {
     try {
-      const response = await fetch(`http://localhost:8000/donations?hospital=${encodeURIComponent(hospitalName)}`);
+      const response = await fetch(`https://backendblooddonation.fly.dev/donations?hospital=${encodeURIComponent(hospitalName)}`);
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);

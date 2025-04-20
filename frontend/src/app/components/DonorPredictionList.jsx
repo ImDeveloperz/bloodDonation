@@ -33,7 +33,7 @@ const DonorPredictionList = ({ donors }) => {
         const samples = donorList.map(computeFeatures);
 
         try {
-            const res = await fetch("http://localhost:8000/predict", {
+            const res = await fetch("https://backendblooddonation.fly.dev/predict", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ samples }),
