@@ -399,8 +399,11 @@ const DonorPredictionList = ({ donors }) => {
             );
     })
   ) : (
-    <div className="col-span-3 py-12 text-center bg-white rounded-lg shadow">
-      <div className="text-gray-500">No donors found matching "{searchQuery}"</div>
+    <div className="flex items-center justify-center w-full py-12 rounded-lg bg-red-50 border border-red-100">
+        <div className="text-center">
+          <Droplet size={40} className="mx-auto text-red-300 mb-2" />
+          <p className="text-red-500 font-medium">No results found.</p>
+        </div>
     </div>
   )}
 </div>
