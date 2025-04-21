@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import { fetchDonationsByHospital } from "../lib/fetchDonationsByHospital";
-import { Search, Droplet, Phone, Mail, Calendar, User, CreditCard, Repeat, PlusCircle, X, Loader2 } from "lucide-react";
+import { Search, Droplet, Phone, Mail, Calendar, User, CreditCard, Repeat, PlusCircle, X, Loader2, CheckCircle, AlertTriangle } from "lucide-react";
 
-export default function Hospital({ hospitalName,hospitalId }) {
+export default function Hospital({ hospitalName }) {
   const [donations, setDonations] = useState([]);
   const [filteredDonations, setFilteredDonations] = useState([]);
   const [searchCIN, setSearchCIN] = useState("");
@@ -14,6 +14,13 @@ export default function Hospital({ hospitalName,hospitalId }) {
     email: "",
     num_tel: "",
     blood_type: "A+"
+  });
+  
+  // Notification states
+  const [notification, setNotification] = useState({
+    show: false,
+    message: "",
+    type: "success" // success or error
   });
   
   const bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
@@ -39,10 +46,15 @@ export default function Hospital({ hospitalName,hospitalId }) {
     }
   }, [searchCIN, donations]);
 
- 
-  
-
-  
+  // Auto-hide notification after 5 seconds
+  useEffect(() => {
+    if (notification.show) {
+      const timer = setTimeout(() => {
+        setNotification({ ...notification, show: false });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [notification]);
 
   // Blood type styling
   const bloodTypeColors = {
@@ -85,6 +97,15 @@ export default function Hospital({ hospitalName,hospitalId }) {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // Show notification function
+  const showNotification = (message, type = "success") => {
+    setNotification({
+      show: true,
+      message,
+      type
+    });
+  };
+
   // Submit new donor
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,7 +118,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
       email: form.email,
       num_tel: form.num_tel,
       blood_type: form.blood_type,
-      hospital_id: hospitalId,  // Use the hospitalName prop
+      hospital_id: hospitalName,  // Use the hospitalName prop
     };
   
     try {
@@ -122,8 +143,12 @@ export default function Hospital({ hospitalName,hospitalId }) {
         num_tel: "",
         blood_type: "A+",
       });
+      
+      // Show success notification
+      showNotification(`Donor ${donorPayload.fullname} added successfully!`);
     } catch (err) {
-      alert("Error adding donation.");
+      // Show error notification
+      showNotification(`Error adding donor: ${err.message}`, "error");
       console.error(err);
     } finally {
       setLoading(false);
@@ -147,7 +172,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
       });
   
       if (!res.ok) {
-        throw new Error("Error");
+        throw new Error("Error processing donation");
       }
   
       // Handle the response from the backend
@@ -155,12 +180,15 @@ export default function Hospital({ hospitalName,hospitalId }) {
       
       if (responseData.message === "Donation frequency updated") {
         await loadDonations();
-        alert(`Donation added for ${donor.fullname}. Frequency updated to: ${responseData.frequence}`);
+        // Show success notification
+        showNotification(`Donation added for ${donor.fullname}.`);
       } else {
-        alert(responseData.message);
+        // Show info notification
+        showNotification(responseData.message, "info");
       }
     } catch (err) {
-      alert("Error adding donation.");
+      // Show error notification
+      showNotification(`Error adding donation: ${err.message}`, "error");
       console.error(err);
     }
   };
@@ -184,6 +212,40 @@ export default function Hospital({ hospitalName,hospitalId }) {
           />
         ))}
       </div>
+
+      {/* Notification Toast */}
+      {notification.show && (
+        <div 
+          className={`fixed bottom-4 right-6 z-50 p-4 rounded-lg shadow-lg max-w-md animate-slide-in-right flex items-center gap-3 ${
+            notification.type === 'success' ? 'bg-green-50 border-l-4 border-green-500' : 
+            notification.type === 'error' ? 'bg-red-50 border-l-4 border-red-500' : 
+            'bg-blue-50 border-l-4 border-blue-500'
+          }`}
+        >
+          {notification.type === 'success' ? (
+            <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
+          ) : notification.type === 'error' ? (
+            <AlertTriangle className="text-red-500 flex-shrink-0" size={20} />
+          ) : (
+            <Droplet className="text-blue-500 flex-shrink-0" size={20} />
+          )}
+          <div className="flex-1">
+            <p className={`text-sm font-medium ${
+              notification.type === 'success' ? 'text-green-800' : 
+              notification.type === 'error' ? 'text-red-800' : 
+              'text-blue-800'
+            }`}>
+              {notification.message}
+            </p>
+          </div>
+          <button 
+            onClick={() => setNotification({ ...notification, show: false })}
+            className="text-gray-400 hover:text-gray-600"
+          >
+            <X size={16} />
+          </button>
+        </div>
+      )}
 
       <div className="max-w-7xl mx-auto p-6 relative z-10">
         {/* Header with animated gradient */}
@@ -454,6 +516,13 @@ export default function Hospital({ hospitalName,hospitalId }) {
         }
         .animate-modal-in {
           animation: modal-in 0.3s ease-out forwards;
+        }
+        @keyframes slide-in-right {
+          from { opacity: 0; transform: translateX(20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slide-in-right {
+          animation: slide-in-right 0.3s ease-out forwards;
         }
       `}</style>
     </div>
