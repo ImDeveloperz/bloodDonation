@@ -96,7 +96,6 @@ export default function Hospital({ hospitalName }) {
       email: form.email,
       num_tel: form.num_tel,
       blood_type: form.blood_type,
-      hospital_id: form.hospital_id, // ensure this is passed from the form or context
     };
   
     try {
@@ -115,7 +114,6 @@ export default function Hospital({ hospitalName }) {
         fullname: "",
         email: "",
         num_tel: "",
-        hospital_id: "", // reset hospital if included
         blood_type: "A+",
       });
     } catch (err) {
@@ -130,6 +128,7 @@ export default function Hospital({ hospitalName }) {
     const newDonation = {
       ...donor,
       id: donor.cin,
+      hospital_id: "user1", 
       last_donation_date: new Date().toISOString().split("T")[0],
     };
   
