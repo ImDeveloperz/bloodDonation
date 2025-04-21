@@ -31,7 +31,12 @@ const Page = () => {
       <HeaderAfterAuth />
       <main className="max-w-6xl mx-auto px-4 py-10">
         {donors.length === 0 ? (
-          <div className="text-center text-gray-600 text-lg">No donors to display.</div>
+          <div className="flex items-center justify-center w-full py-12 rounded-lg bg-red-50 border border-red-100">
+          <div className="text-center">
+            <Droplet size={40} className="mx-auto text-red-300 mb-2" />
+            <p className="text-red-500 font-medium">No results found.</p>
+          </div>
+      </div>
         ) : (
           <DonorPredictionList donors={donors} />
         )}
