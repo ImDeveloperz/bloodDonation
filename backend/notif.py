@@ -76,7 +76,7 @@ class ContactForm(BaseModel):
 class EmailRequest(BaseModel):
     to_email: EmailStr
     fullname: str
-    prediction: int  # 1 for will donate, 0 for not donate
+    prediction: int  # 1 for will donate, 0 for not donate.
     
 
 @router.post("/contact")
