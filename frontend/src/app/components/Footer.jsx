@@ -94,7 +94,7 @@ export default function Footer() {
                   placeholder="Your email address"
                   className="w-full px-4 py-3 text-sm rounded-lg bg-gray-900/50 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/20 transition-all"
                 />
-                <button className=" w-full sm:w-auto sm:absolute sm:right-2 sm:top-1/2 sm:-translate-y-1/2 bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-2 rounded-lg shadow-lg font-medium hover:from-red-700 hover:to-red-600 transition-all text-sm">
+                <button className=" w-full sm:mt-1 sm:w-auto sm:absolute sm:right-2 sm:top-1/2 sm:-translate-y-1/2 bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-2 rounded-lg shadow-lg font-medium hover:from-red-700 hover:to-red-600 transition-all text-sm">
                   Subscribe
                 </button>
               </div>
