@@ -120,7 +120,6 @@ export default function Hospital({ hospitalName }) {
         fullname: "",
         email: "",
         num_tel: "",
-        hospital_id: "", // reset hospital if included
         blood_type: "A+",
       });
     } catch (err) {
@@ -135,6 +134,7 @@ export default function Hospital({ hospitalName }) {
     const newDonation = {
       ...donor,
       id: donor.cin,
+      hospital_id: "user1", 
       last_donation_date: new Date().toISOString().split("T")[0],
     };
   
