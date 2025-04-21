@@ -5,6 +5,7 @@ import HeaderAfterAuth from "../components/HeaderAfterAuth";
 import DonorPredictionList from "../components/DonorPredictionList2";
 import { fetchDonationsByHospital } from "../lib/fetchDonationsByHospital";
 import useProtectedRoute from "../hooks/useProtectedRoute";
+import { Droplet} from "lucide-react";
 import dayjs from "dayjs";
 
 const Page = () => {
@@ -31,10 +32,10 @@ const Page = () => {
       <HeaderAfterAuth />
       <main className="max-w-6xl mx-auto px-4 py-10">
         {donors.length === 0 ? (
-          <div className="flex items-center justify-center w-full py-12 rounded-lg bg-red-50 border border-red-100">
-          <div className="text-center">
+          <div className="flex items-center justify-center w-full mt-24 py-12 rounded-lg bg-red-50 border border-red-100">
+          <div className="text-center ">
             <Droplet size={40} className="mx-auto text-red-300 mb-2" />
-            <p className="text-red-500 font-medium">No results found.</p>
+            <p className="text-red-500 font-medium">No donors to display.</p>
           </div>
       </div>
         ) : (
