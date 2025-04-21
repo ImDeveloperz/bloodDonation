@@ -12,7 +12,7 @@ class LoginRequest(BaseModel):
     email: str
     password: str
 
-@router.post("/login")
+@router.post("/log")
 def login(data: LoginRequest):
     users_ref = db.reference("users_hospital_bank")
     users = users_ref.get()
