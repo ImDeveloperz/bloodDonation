@@ -120,7 +120,7 @@ export default function Testimonials() {
                 <div className="w-24 h-24 mx-auto bg-gray-700 rounded-full mb-4 relative overflow-hidden border-2 border-red-500">
                   {/* Same image for all testimonials */}
                   <img 
-                    src="https://randomuser.me/api/portraits/men/7.jpg" 
+                    src="https://randomuser.me/api/portraits/men/42.jpg" 
                     alt={testimonials[activeIndex].name}
                     className="w-full h-full object-cover"
                   />
