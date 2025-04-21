@@ -12,6 +12,7 @@ sys.path.append(os.path.abspath('.'))  # Workaround for module path issues
 import auth  # Authentication (Firebase-based)
 import chatboot
 import notif
+
 # Load XGBoost model and scaler
 try:
     model = joblib.load("./data/xgboost_model_tuned.pkl")
@@ -37,12 +38,18 @@ app.add_middleware(
 
 # Pydantic model for input sample
 class Sample(BaseModel):
+    """
+    Represents a single input instance for prediction.
+    """
     recency: float
     frequency: float
     time: float
 
-# Pydantic model for batch input
+# Input model for a batch of prediction samples
 class BatchInput(BaseModel):
+    """
+    A batch of input samples for bulk prediction.
+    """
     samples: List[Sample]
 
 @app.get("/")
@@ -51,6 +58,18 @@ def read_root():
 
 @app.post("/predict")
 def predict(input_batch: BatchInput):
+    """
+    Perform batch prediction using the pre-trained XGBoost model.
+
+    Parameters:
+        input_batch (BatchInput): A JSON payload containing a list of input samples.
+
+    Returns:
+        dict: A dictionary containing the list of predictions.
+
+    Raises:
+        HTTPException: If input processing or prediction fails.
+    """
     try:
         # Convert input samples into a 2D numpy array
         data = np.array([

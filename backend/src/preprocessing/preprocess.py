@@ -8,14 +8,30 @@ from imblearn.over_sampling import ADASYN, BorderlineSMOTE
 from imblearn.combine import SMOTETomek, SMOTEENN
 
 def load_data(filepath):
-    """Charge le fichier CSV et renomme les colonnes."""
+    """Load CSV file and rename the columns."""
     df = pd.read_csv(filepath)
     df.columns = ['Recency', 'Frequency', 'Monetary', 'Time', 'Target']
     df.columns = df.columns.str.strip()
     return df
 
 def preprocess_data(df):
-    """Sépare les features et la cible, applique une standardisation."""
+    """
+    Preprocesses the input data by separating features and target, and applying standardization.
+    
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        Input dataframe containing both features and target variable.
+        
+    Returns:
+    --------
+    X_scaled : numpy.ndarray
+        Scaled feature matrix
+    y : pandas.Series
+        Target variable
+    scaler : StandardScaler
+        Fitted scaler object for potential later use
+    """
     X = df.drop('Target', axis=1)
     y = df['Target']
     
@@ -26,29 +42,37 @@ def preprocess_data(df):
 
 def balance_data_with_smote(X, y, random_state=42):
     """
-    Équilibre les données en utilisant la technique SMOTE.
+    Balances imbalanced dataset using SMOTE (Synthetic Minority Over-sampling Technique).
     
     Parameters:
     -----------
     X : array-like, shape (n_samples, n_features)
-        Les données des features.
+        Feature matrix
     y : array-like, shape (n_samples,)
-        Les données de la cible.
+        Target vector
     random_state : int, default=42
-        Contrôle le caractère aléatoire de la génération d'échantillons.
+        Random seed for reproducibility
         
     Returns:
     --------
-    X_balanced : array-like
-        Les données des features équilibrées.
-    y_balanced : array-like
-        Les données de la cible équilibrées.
+    X_balanced : numpy.ndarray
+        Balanced feature matrix with synthetic samples
+    y_balanced : numpy.ndarray
+        Balanced target vector
+        
+    Notes:
+    ------
+    - SMOTE creates synthetic samples for minority class(es) rather than simple oversampling
+    - Prints class distribution before and after balancing for verification
     """
+
+    # Initialize SMOTE object with specified random state
     smote = SMOTE(random_state=random_state)
+    
+    # Apply SMOTE to generate synthetic samples and balance classes
     X_balanced, y_balanced = smote.fit_resample(X, y)
     
-    # Afficher les statistiques sur l'équilibrage
-    print("Distribution des classes avant équilibrage:")
+    # Display class distribution before and after balancing    print("Distribution des classes avant équilibrage:")
     print(pd.Series(y).value_counts())
     print("\nDistribution des classes après équilibrage:")
     print(pd.Series(y_balanced).value_counts())
