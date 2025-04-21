@@ -1,5 +1,5 @@
 'use client';
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import HeaderAfterAuth from '../components/HeaderAfterAuth'
 import NewDonationPage from '../components/NewDonation'
 import useProtectedRoute from '../hooks/useProtectedRoute';
