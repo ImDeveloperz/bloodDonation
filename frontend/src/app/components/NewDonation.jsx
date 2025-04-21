@@ -96,6 +96,7 @@ export default function Hospital({ hospitalName }) {
       email: form.email,
       num_tel: form.num_tel,
       blood_type: form.blood_type,
+      hospital_id: "user1", 
     };
   
     try {
