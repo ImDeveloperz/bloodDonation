@@ -3,6 +3,7 @@ import React from 'react'
 import HeaderAfterAuth from '../components/HeaderAfterAuth'
 import NewDonationPage from '../components/NewDonation'
 import useProtectedRoute from '../hooks/useProtectedRoute';
+import BloodLoading from '../components/BloodLoading';
 
 const page = () => {
   // Calling the custom hook for protected route access
@@ -27,7 +28,7 @@ const page = () => {
   return (
     <div>
         <HeaderAfterAuth/>
-        <NewDonationPage hospitalName={"CHU Ibn Rochd"}/>
+        <NewDonationPage hospitalName={user.nom_hospital} hospitalId = {user.id}/>
     </div>
   )
 }
