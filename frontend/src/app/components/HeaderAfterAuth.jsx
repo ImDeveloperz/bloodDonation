@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
@@ -31,7 +32,7 @@ export default function HeaderAfterAuth() {
   };
 
   const navLinkClass = (path) =>
-    `px-4 py-2 transition rounded-md ${
+    `px-3 sm:px-4 py-2 transition rounded-md ${
       pathname === path
         ? "text-red-600 font-semibold"
         : "text-gray-800 hover:text-red-500"
@@ -39,19 +40,19 @@ export default function HeaderAfterAuth() {
 
   return (
     <header ref={navRef} className="w-full fixed z-30 top-0">
-      <div className="bg-white shadow-lg rounded-xl mx-4 mt-4 max-w-[1400px] px-6 py-4 flex items-center justify-between backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto overflow-x-auto">
+      <div className="bg-white shadow-lg rounded-xl mx-4 mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
         {/* Logo */}
-        <div className="flex items-center space-x-3 shrink-0">
+        <div className="flex items-center shrink-0">
           <img
             src="/logo.png"
             alt="LifeLinkAi Logo"
-            className="h-14 w-auto ml-4 transition-transform duration-300 hover:scale-105"
+            className="h-10 sm:h-12 md:h-14 w-auto ml-0 sm:ml-4 transition-transform duration-300 hover:scale-105"
           />
         </div>
 
-        {/* Desktop Nav + Logout (no wrap!) */}
-        <div className="hidden md:flex items-center justify-end flex-nowrap gap-6 ml-auto">
-          <nav className="flex items-center space-x-6">
+        {/* Desktop Nav + Logout */}
+        <div className="hidden md:flex items-center justify-end flex-nowrap gap-2 lg:gap-6 ml-auto">
+          <nav className="flex items-center space-x-2 lg:space-x-6">
             <Link href="/donations" className={navLinkClass("/donations")}>
               Donations
             </Link>
@@ -64,7 +65,7 @@ export default function HeaderAfterAuth() {
           </nav>
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white px-6 py-2 rounded-md font-semibold shadow hover:bg-red-600 transition"
+            className="bg-red-500 text-white px-4 lg:px-6 py-2 rounded-md font-semibold shadow hover:bg-red-600 transition whitespace-nowrap"
           >
             Déconnexion
           </button>
@@ -76,21 +77,21 @@ export default function HeaderAfterAuth() {
           className="md:hidden text-gray-800 ml-2"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {menuOpen && (
         <div className="md:hidden bg-white rounded-xl mx-4 mt-2 py-4 px-4 shadow space-y-2">
-          <Link href="/donations" className={navLinkClass("/donations")}>
-            Donations
+          <Link href="/donations" className="block py-2 text-center">
+            <span className={navLinkClass("/donations")}>Donations</span>
           </Link>
-          <Link href="/new-donations" className={navLinkClass("/new-donations")}>
-            Add Donation
+          <Link href="/new-donations" className="block py-2 text-center">
+            <span className={navLinkClass("/new-donations")}>Add Donation</span>
           </Link>
-          <Link href="/who-will-donate" className={navLinkClass("/who-will-donate")}>
-            Who Will Donate
+          <Link href="/who-will-donate" className="block py-2 text-center">
+            <span className={navLinkClass("/who-will-donate")}>Who Will Donate</span>
           </Link>
           <button
             onClick={handleLogout}
