@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { fetchDonationsByHospital } from "../lib/fetchDonationsByHospital";
 import { Search, Droplet, Phone, Mail, Calendar, User, CreditCard, Repeat, PlusCircle, X, Loader2 } from "lucide-react";
 
-export default function Hospital({ hospitalName }) {
+export default function Hospital({ hospitalName,hospitalId }) {
   const [donations, setDonations] = useState([]);
   const [filteredDonations, setFilteredDonations] = useState([]);
   const [searchCIN, setSearchCIN] = useState("");
@@ -97,7 +97,7 @@ export default function Hospital({ hospitalName }) {
       email: form.email,
       num_tel: form.num_tel,
       blood_type: form.blood_type,
-      hospital_id: hospitalName,  // Use the hospitalName prop
+      hospital_id: hospitalId,  // Use the hospitalName prop
     };
   
     try {
