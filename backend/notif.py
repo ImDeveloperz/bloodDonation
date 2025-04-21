@@ -7,8 +7,10 @@ import os
 from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
+# Load environment variables from .env file (used for sensitive info like credentials)
 load_dotenv()
 
+# Initialize FastAPI router for email-related routes
 router = APIRouter()
 
 # Email configuration
@@ -20,6 +22,16 @@ SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "hrll osvs mlwg gzgv")
 
 
 def build_email_html(fullname: str, prediction: int) -> str:
+    """
+    Builds HTML content for the email sent to users based on the prediction result.
+
+    Args:
+        fullname (str): Full name of the recipient.
+        prediction (int): Prediction outcome (1 for likely to donate, 0 otherwise).
+
+    Returns:
+        str: HTML-formatted email body.
+    """
     if prediction == 1:
         message = f"""
         <p style="font-size: 18px; color: #333;">Thank you, <strong>{fullname}</strong>, for being a committed donor ❤️</p>
@@ -50,11 +62,18 @@ def build_email_html(fullname: str, prediction: int) -> str:
     </html>
     """
 
+# ----------------------- DATA MODELS -----------------------
+
 class ContactForm(BaseModel):
+    """
+    Schema for contact form submissions.
+    """
     name: str
     email: EmailStr
     city: str
     message: str
+
+    # Validators to ensure fields are not empty
     @validator('name')
     def name_must_not_be_empty(cls, v):
         if not v.strip():
@@ -74,14 +93,28 @@ class ContactForm(BaseModel):
         return v
 
 class EmailRequest(BaseModel):
+    """
+    Schema for sending donor appreciation emails.
+    """
     to_email: EmailStr
     fullname: str
     prediction: int  # 1 for will donate, 0 for not donate.
-    
+
+
+# ----------------------- ROUTES -----------------------
+
 
 @router.post("/contact")
 async def submit_contact(contact_form: ContactForm):
-    """Handle blood donation contact form submission"""
+    """
+    Handles submission of the contact form and sends an email to admin.
+
+    Args:
+        contact_form (ContactForm): The submitted form data.
+
+    Returns:
+        JSONResponse: Success or failure message.
+    """
     try:
         # Send email
         email_sent = send_email_contact(contact_form)
@@ -108,6 +141,15 @@ async def submit_contact(contact_form: ContactForm):
 
 @router.post("/send-email")
 def send_email(request: EmailRequest):
+    """
+    Sends a personalized encouragement email based on prediction result.
+
+    Args:
+        request (EmailRequest): Recipient email and prediction value.
+
+    Returns:
+        dict: Success/failure message.
+    """
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = int(os.getenv("SMTP_PORT"))
     email_sender = os.getenv("EMAIL_SENDER")
@@ -129,7 +171,20 @@ def send_email(request: EmailRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error while sending email: {str(e)}")
 
+
+# ----------------------- EMAIL HANDLER FUNCTION -----------------------
+
+
 def send_email_contact(contact_form: ContactForm):
+    """
+    Sends an internal notification email to the admin using the contact form info.
+
+    Args:
+        contact_form (ContactForm): Form data containing sender info and message.
+
+    Returns:
+        bool: Whether the email was successfully sent.
+    """
     try:
         # Create message
         message = MIMEMultipart("alternative")
