@@ -65,16 +65,15 @@ export default function HeroSection() {
         </div>
         
         {/* Right Image with original heroblood.png and transparency preserved */}
-        <div className="relative">
+        <div className="relative flex justify-center md:block w-full md:w-auto">
           <div className="absolute -inset-4 bg-red-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
           <img
-          src="/heropic.png"
-          alt="Blood donation illustration"
-          className="w-[72%] sm:w-[66%] md:w-[94%] max-w-sm sm:max-w-md md:max-w-xl relative z-10 drop-shadow-2xl"
-        />
+            src="/heropic.png"
+            alt="Blood donation illustration"
+            className="w-[80%] sm:w-[72%] md:w-[94%] max-w-sm sm:max-w-md md:max-w-xl relative z-10 drop-shadow-2xl"
+          />
           {/* Blood Drop Animation */}
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full animate-bounce">
-
             <div className="absolute top-0 left-0 w-full h-full bg-red-600 rounded-full animate-ping"></div>
           </div>
         </div>
@@ -100,6 +99,26 @@ export default function HeroSection() {
         <div className="text-center px-4">
           <p className="text-2xl font-bold text-red-600">98%</p>
           <p className="text-gray-600">Satisfaction Rate</p>
+        </div>
+      </div>
+      
+      {/* Mobile-only Stats Grid */}
+      <div className="grid grid-cols-2 gap-4 lg:hidden mt-8 bg-white bg-opacity-70 backdrop-blur-sm p-4 rounded-xl shadow-sm">
+        <div className="text-center px-2">
+          <p className="text-xl font-bold text-red-600">24/7</p>
+          <p className="text-sm text-gray-600">Support</p>
+        </div>
+        <div className="text-center px-2">
+          <p className="text-xl font-bold text-red-600">100+</p>
+          <p className="text-sm text-gray-600">Partner Hospitals</p>
+        </div>
+        <div className="text-center px-2">
+          <p className="text-xl font-bold text-red-600">15 min</p>
+          <p className="text-sm text-gray-600">Average Response</p>
+        </div>
+        <div className="text-center px-2">
+          <p className="text-xl font-bold text-red-600">98%</p>
+          <p className="text-sm text-gray-600">Satisfaction Rate</p>
         </div>
       </div>
     </section>
