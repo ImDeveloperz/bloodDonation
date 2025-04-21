@@ -131,7 +131,7 @@ async def add_or_update_donor(donor: dict):
 
     else:
         # Donor doesn't exist: create new
-        new_id = f"donor{len(donors)+1}"
+        new_id = f"donor{len(donors)+1}_{cin}"
         donor["id"] = new_id
         donor["frequence"] = 1
         donor["first_donation_date"] = now_str
