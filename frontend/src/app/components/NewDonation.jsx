@@ -90,13 +90,14 @@ export default function Hospital({ hospitalName }) {
     e.preventDefault();
     setLoading(true);
   
+    // Update your handleSubmit function to include the hospital_id
     const donorPayload = {
       cin: form.cin,
       fullname: form.fullname,
       email: form.email,
       num_tel: form.num_tel,
       blood_type: form.blood_type,
-      hospital_id: form.hospital_id, // ensure this is passed from the form or context
+      hospital_id: hospitalName,  // Use the hospitalName prop
     };
   
     try {
@@ -106,7 +107,11 @@ export default function Hospital({ hospitalName }) {
         body: JSON.stringify(donorPayload),
       });
   
-      if (!res.ok) throw new Error("Failed to save donation");
+      if (!res.ok) {
+        const errorData = await res.json();
+        console.error("Server error response:", errorData);
+        throw new Error(`Failed to save donation: ${errorData.detail || "Unknown error"}`);
+      }
   
       await loadDonations();
       setShowModal(false);
