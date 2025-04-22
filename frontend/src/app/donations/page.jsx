@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import HeaderAfterAuth from '../components/HeaderAfterAuth';
-import Hospital from '../components/Hospital';
-import useProtectedRoute from '../hooks/useProtectedRoute';
-import BloodLoading from '../components/BloodLoading';
+import HeaderAfterAuth from '../../components/HeaderAfterAuth';
+import Hospital from '../../components/Hospital';
+import useProtectedRoute from '../../hooks/useProtectedRoute';
+import BloodLoading from '../../components/BloodLoading';
 
 const Page = () => {
   // Calling the custom hook for protected route access

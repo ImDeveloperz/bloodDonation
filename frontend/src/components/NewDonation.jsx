@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { fetchDonationsByHospital } from "../lib/fetchDonationsByHospital";
 import { Search, Droplet, Phone, Mail, Calendar, User, CreditCard, Repeat, PlusCircle, X, Loader2, CheckCircle, AlertTriangle } from "lucide-react";
 
-export default function Hospital({ hospitalName,hospitalId }) {
+export default function Hospital({ hospitalName, hospitalId }) {
   const [donations, setDonations] = useState([]);
   const [filteredDonations, setFilteredDonations] = useState([]);
   const [searchCIN, setSearchCIN] = useState("");
@@ -15,31 +15,43 @@ export default function Hospital({ hospitalName,hospitalId }) {
     num_tel: "",
     blood_type: "A+"
   });
-  
+
   // Notification states
   const [notification, setNotification] = useState({
     show: false,
     message: "",
     type: "success" // success or error
   });
-  
+
   const bloodTypes = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
-  
+
   useEffect(() => {
     setLoading(true);
     fetchDonationsByHospital(hospitalName).then((data) => {
-      setDonations(data);
-      setFilteredDonations(data);
+      // Sort by first_donation_date (oldest to newest)
+      const sortedData = data.sort((a, b) => {
+        const dateA = new Date(a.first_donation_date);
+        const dateB = new Date(b.first_donation_date);
+        return dateB - dateA;
+      });
+      setDonations(sortedData);
+      setFilteredDonations(sortedData);
       setLoading(false);
     });
   }, [hospitalName]);
 
   useEffect(() => {
+    // Sort by first_donation_date (oldest to newest)
+    const sortedData = donations.sort((a, b) => {
+      const dateA = new Date(a.first_donation_date);
+      const dateB = new Date(b.first_donation_date);
+      return dateB - dateA;
+    });
     if (searchCIN.trim() === "") {
-      setFilteredDonations(donations);
+      setFilteredDonations(sortedData);
     } else {
       setFilteredDonations(
-        donations.filter((donor) =>
+        sortedData.filter((donor) =>
           donor.cin.toLowerCase().includes(searchCIN.toLowerCase())
         )
       );
@@ -58,26 +70,32 @@ export default function Hospital({ hospitalName,hospitalId }) {
 
   // Blood type styling
   const bloodTypeColors = {
-    "A+": {bg: "bg-red-100", text: "text-red-800", gradient: "from-red-600 to-red-400"},
-    "A-": {bg: "bg-red-50", text: "text-red-700", gradient: "from-red-500 to-red-300"},
-    "B+": {bg: "bg-blue-100", text: "text-blue-800", gradient: "from-blue-600 to-blue-400"},
-    "B-": {bg: "bg-blue-50", text: "text-blue-700", gradient: "from-blue-500 to-blue-300"},
-    "AB+": {bg: "bg-purple-100", text: "text-purple-800", gradient: "from-purple-600 to-purple-400"},
-    "AB-": {bg: "bg-purple-50", text: "text-purple-700", gradient: "from-purple-500 to-purple-300"},
-    "O+": {bg: "bg-green-100", text: "text-green-800", gradient: "from-green-600 to-green-400"},
-    "O-": {bg: "bg-green-50", text: "text-green-700", gradient: "from-green-500 to-green-300"},
+    "A+": { bg: "bg-red-100", text: "text-red-800", gradient: "from-red-600 to-red-400" },
+    "A-": { bg: "bg-red-50", text: "text-red-700", gradient: "from-red-500 to-red-300" },
+    "B+": { bg: "bg-blue-100", text: "text-blue-800", gradient: "from-blue-600 to-blue-400" },
+    "B-": { bg: "bg-blue-50", text: "text-blue-700", gradient: "from-blue-500 to-blue-300" },
+    "AB+": { bg: "bg-purple-100", text: "text-purple-800", gradient: "from-purple-600 to-purple-400" },
+    "AB-": { bg: "bg-purple-50", text: "text-purple-700", gradient: "from-purple-500 to-purple-300" },
+    "O+": { bg: "bg-green-100", text: "text-green-800", gradient: "from-green-600 to-green-400" },
+    "O-": { bg: "bg-green-50", text: "text-green-700", gradient: "from-green-500 to-green-300" },
   };
 
   const loadDonations = async () => {
     const data = await fetchDonationsByHospital(hospitalName);
-    setDonations(data);
-    setFilteredDonations(data);
+    // Sort by first_donation_date (oldest to newest)
+    const sortedData = data.sort((a, b) => {
+      const dateA = new Date(a.first_donation_date);
+      const dateB = new Date(b.first_donation_date);
+      return dateB - dateA;
+    });
+    setDonations(sortedData);
+    setFilteredDonations(sortedData);
   };
-  
+
   useEffect(() => {
     loadDonations();
   }, [hospitalName]);
-  
+
 
   // Filter by CIN
   useEffect(() => {
@@ -110,7 +128,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-  
+
     // Update your handleSubmit function to include the hospital_id
     const donorPayload = {
       cin: form.cin,
@@ -120,20 +138,20 @@ export default function Hospital({ hospitalName,hospitalId }) {
       blood_type: form.blood_type,
       hospital_id: hospitalId,  // Use the hospitalName prop
     };
-  
+
     try {
       const res = await fetch("https://backendblooddonation.fly.dev/donors/add-or-update", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(donorPayload),
       });
-  
+
       if (!res.ok) {
         const errorData = await res.json();
         console.error("Server error response:", errorData);
         throw new Error(`Failed to save donation: ${errorData.detail || "Unknown error"}`);
       }
-  
+
       await loadDonations();
       setShowModal(false);
       setForm({
@@ -143,7 +161,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
         num_tel: "",
         blood_type: "A+",
       });
-      
+
       // Show success notification
       showNotification(`Donor ${donorPayload.fullname} added successfully!`);
     } catch (err) {
@@ -154,15 +172,15 @@ export default function Hospital({ hospitalName,hospitalId }) {
       setLoading(false);
     }
   };
-  
+
   const handleInstantDonation = async (donor) => {
     const newDonation = {
       ...donor,
       id: donor.cin,
-      hospital_id: "user1", 
+      hospital_id: "user1",
       last_donation_date: new Date().toISOString().split("T")[0],
     };
-  
+
     try {
       // Call the backend API on port 8000 to check and update the frequency
       const res = await fetch(`https://backendblooddonation.fly.dev/donors/${donor.id}/check-donation`, {
@@ -170,14 +188,14 @@ export default function Hospital({ hospitalName,hospitalId }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newDonation),
       });
-  
+
       if (!res.ok) {
         throw new Error("Error processing donation");
       }
-  
+
       // Handle the response from the backend
       const responseData = await res.json();
-      
+
       if (responseData.message === "Donation frequency updated") {
         await loadDonations();
         // Show success notification
@@ -192,14 +210,14 @@ export default function Hospital({ hospitalName,hospitalId }) {
       console.error(err);
     }
   };
-  
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-red-50 pb-16">
       {/* Animated background elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {[...Array(8)].map((_, i) => (
-          <div 
+          <div
             key={i}
             className="absolute opacity-20 bg-red-400 rounded-full blur-xl"
             style={{
@@ -215,12 +233,11 @@ export default function Hospital({ hospitalName,hospitalId }) {
 
       {/* Notification Toast */}
       {notification.show && (
-        <div 
-          className={`fixed bottom-4 right-6 z-50 p-4 rounded-lg shadow-lg max-w-md animate-slide-in-right flex items-center gap-3 ${
-            notification.type === 'success' ? 'bg-green-50 border-l-4 border-green-500' : 
-            notification.type === 'error' ? 'bg-red-50 border-l-4 border-red-500' : 
-            'bg-blue-50 border-l-4 border-blue-500'
-          }`}
+        <div
+          className={`fixed bottom-4 right-6 z-50 p-4 rounded-lg shadow-lg max-w-md animate-slide-in-right flex items-center gap-3 ${notification.type === 'success' ? 'bg-green-50 border-l-4 border-green-500' :
+              notification.type === 'error' ? 'bg-red-50 border-l-4 border-red-500' :
+                'bg-blue-50 border-l-4 border-blue-500'
+            }`}
         >
           {notification.type === 'success' ? (
             <CheckCircle className="text-green-500 flex-shrink-0" size={20} />
@@ -230,15 +247,14 @@ export default function Hospital({ hospitalName,hospitalId }) {
             <Droplet className="text-blue-500 flex-shrink-0" size={20} />
           )}
           <div className="flex-1">
-            <p className={`text-sm font-medium ${
-              notification.type === 'success' ? 'text-green-800' : 
-              notification.type === 'error' ? 'text-red-800' : 
-              'text-blue-800'
-            }`}>
+            <p className={`text-sm font-medium ${notification.type === 'success' ? 'text-green-800' :
+                notification.type === 'error' ? 'text-red-800' :
+                  'text-blue-800'
+              }`}>
               {notification.message}
             </p>
           </div>
-          <button 
+          <button
             onClick={() => setNotification({ ...notification, show: false })}
             className="text-gray-400 hover:text-gray-600"
           >
@@ -264,7 +280,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
               onClick={() => setShowModal(true)}
               className="mt-4 md:mt-0 group flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-red-500/20"
             >
-              <PlusCircle size={20} className="group-hover:rotate-90 transition-transform duration-300" /> 
+              <PlusCircle size={20} className="group-hover:rotate-90 transition-transform duration-300" />
               Add New Donor
             </button>
           </div>
@@ -272,7 +288,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
             <Droplet size={120} className="text-red-100 opacity-20" />
           </div>
         </div>
-        
+
         {/* Search and Stats Bar */}
         <div className="relative mb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="relative max-w-md w-full">
@@ -287,7 +303,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
               className="block w-full pl-10 pr-4 py-3 border-0 ring-1 ring-red-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none shadow-sm bg-white text-gray-900"
             />
           </div>
-          
+
           <div className="flex gap-4">
             <div className="bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm border border-red-100">
               <div className="text-xs text-gray-500">Total Donors</div>
@@ -299,7 +315,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
             </div>
           </div>
         </div>
-        
+
         {/* Grid Layout - 3 per row on laptop, 1 on mobile */}
         <div className="relative">
           {/* Results header */}
@@ -307,7 +323,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
             <h2 className="text-lg font-semibold text-gray-700">Available Donors</h2>
             <div className="h-1 flex-grow mx-4 bg-gradient-to-r from-transparent via-red-200 to-transparent"></div>
           </div>
-          
+
           {/* Grid container */}
           {filteredDonations.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -327,11 +343,11 @@ export default function Hospital({ hospitalName,hospitalId }) {
                       <span className="font-medium">{donor.frequence || 1} donations</span>
                     </div>
                   </div>
-                  
+
                   {/* Donor information */}
                   <div className="p-5">
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">{donor.fullname}</h3>
-                    
+
                     <div className="space-y-3 mb-4">
                       <div className="flex items-center text-sm text-gray-600">
                         <CreditCard size={16} className="mr-2 text-red-500" />
@@ -346,7 +362,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                         <span className="truncate">{donor.email}</span>
                       </div>
                     </div>
-                    
+
                     {/* Donation dates */}
                     <div className="pt-3 border-t border-gray-100">
                       <div className="grid grid-cols-2 gap-3 text-xs mb-4">
@@ -365,7 +381,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                           </div>
                         </div>
                       </div>
-                      
+
                       {/* Add donation button */}
                       <button
                         onClick={() => handleInstantDonation(donor)}
@@ -388,7 +404,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
               </div>
             </div>
           )}
-          
+
           {/* Loading indicator */}
           {loading && (
             <div className="flex justify-center py-8">
@@ -401,7 +417,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
       {/* Modal Form with Glassmorphism */}
       {showModal && (
         <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div 
+          <div
             className="bg-white/90 backdrop-blur-md p-6 rounded-2xl w-full max-w-md relative shadow-2xl border border-white/50 animate-modal-in"
             onClick={(e) => e.stopPropagation()}
           >
@@ -416,7 +432,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
               <h2 className="text-2xl font-semibold text-gray-800">Add New Donor</h2>
               <p className="text-gray-500">Enter the donor's information below</p>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-1">
                 <label className="text-sm text-gray-700 font-medium">CIN</label>
@@ -430,7 +446,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                   className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-white/50"
                 />
               </div>
-              
+
               <div className="space-y-1">
                 <label className="text-sm text-gray-700 font-medium">Full Name</label>
                 <input
@@ -443,7 +459,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                   className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-white/50"
                 />
               </div>
-              
+
               <div className="space-y-1">
                 <label className="text-sm text-gray-700 font-medium">Email</label>
                 <input
@@ -456,7 +472,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                   className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-white/50"
                 />
               </div>
-              
+
               <div className="space-y-1">
                 <label className="text-sm text-gray-700 font-medium">Phone</label>
                 <input
@@ -469,7 +485,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                   className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 bg-white/50"
                 />
               </div>
-              
+
               <div className="space-y-1">
                 <label className="text-sm text-gray-700 font-medium">Blood Type</label>
                 <select
@@ -484,7 +500,7 @@ export default function Hospital({ hospitalName,hospitalId }) {
                   ))}
                 </select>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={loading}

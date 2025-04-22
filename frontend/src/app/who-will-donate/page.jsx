@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import HeaderAfterAuth from "../components/HeaderAfterAuth";
-import DonorPredictionList from "../components/DonorPredictionList2";
-import { fetchDonationsByHospital } from "../lib/fetchDonationsByHospital";
-import useProtectedRoute from "../hooks/useProtectedRoute";
+import HeaderAfterAuth from "../../components/HeaderAfterAuth";
+import DonorPredictionList from "../../components/DonorPredictionList2";
+import { fetchDonationsByHospital } from "../../lib/fetchDonationsByHospital";
+import useProtectedRoute from "../../hooks/useProtectedRoute";
 import { Droplet} from "lucide-react";
 import dayjs from "dayjs";
 

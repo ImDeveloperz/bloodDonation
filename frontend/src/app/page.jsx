@@ -1,13 +1,13 @@
 "use client"
-import Header from "./components/Header";
-import HeroSection from './components/Hero';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Chatbot from "./components/chatboot/Chatbot";
-import Background from './components/Background';
-import HowItWorks from './components/HowItWorks';
+import Header from "../components/Header";
+import HeroSection from '../components/Hero';
+import Services from '../components/Services';
+import Testimonials from '../components/Testimonials';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import Chatbot from "../components/chatboot/Chatbot";
+import Background from '../components/Background';
+import HowItWorks from '../components/HowItWorks';
 export default function Home() {
   return (
     <>
