@@ -1,12 +1,12 @@
-# 🩸 Neuralink - Revolutionizing Blood Donation with AI 💉
+# 🩸 Lifelink - Revolutionizing Blood Donation with AI 💉
 
-Welcome to **Neuralink** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, Neuralink combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
+Welcome to **Lifelink** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, Lifelink combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
 
 ---
 
-## 🌟 What is Neuralink?
+## 🌟 What is Lifelink?
 
-Neuralink is an **AI-powered web application** designed to:
+Lifelink is an **AI-powered web application** designed to:
 
 - 🗣️ Answer user questions about blood donation through an intelligent **chatbot**.
 - 📍 Help users find the **nearest hospitals** for donation, based on their chosen location.
@@ -30,19 +30,19 @@ Hospitals have a dedicated login system where they can:
 
 ### 📈 Predictive Analytics
 
-Using features like **recency**, **frequency**, and **engagement time**, Neuralink forecasts the **likelihood of donor return** — helping hospitals estimate upcoming blood supply more effectively than ever. 💡💉📆
+Using features like **recency**, **frequency**, and **engagement time**, Lifelink forecasts the **likelihood of donor return** — helping hospitals estimate upcoming blood supply more effectively than ever. 💡💉📆
 
 ### 🌐 Beautiful UI with Next.js
 
 The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and hospitals an intuitive experience:
 
-- 🏠 **Home**: Info about Neuralink, blood donation, and how to get in touch  
+- 🏠 **Home**: Info about Lifelink, blood donation, and how to get in touch  
 - 🤖 **Embedded chatbot** for instant answers  
 - 🔑 **Login system** for hospitals
 
 ---
 
-## 💡 Why Neuralink?
+## 💡 Why Lifelink?
 
 - ✅ Enhances **donor engagement** with smart conversational AI  
 - ✅ Supports hospitals in **managing and predicting blood stocks**  
@@ -51,4 +51,4 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 
 ---
 
-> 🏆 Neuralink isn't just a tool – it's a step toward smarter, data-driven blood donation systems that **save lives**. Let's revolutionize healthcare, one drop at a time. ❤️
+> 🏆 Lifelink isn't just a tool – it's a step toward smarter, data-driven blood donation systems that **save lives**. Let's revolutionize healthcare, one drop at a time. ❤️
