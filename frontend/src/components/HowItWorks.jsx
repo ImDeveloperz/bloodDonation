@@ -5,7 +5,7 @@ export default function HowItWorks() {
   const [activeTab, setActiveTab] = useState('hospitals');
 
   return (
-    <section className="py-16">
+    <section id="how" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-red-600">How It Works</h2>

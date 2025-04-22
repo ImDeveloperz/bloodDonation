@@ -17,8 +17,8 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6">
           <HeroSection />
           <Services />
-          <HowItWorks />
           <Testimonials />
+          <HowItWorks />
           <Contact />
           <Footer />
           <Chatbot />

@@ -22,7 +22,7 @@ const page = () => {
   }, []); // Empty array means this runs once when the component mounts
 
   if (!user) {
-    // If user data is not available yet, return null or a loading spinner
+    // If user data is not available yet, return a loading spinner
     return <BloodLoading />;
   }
   return (

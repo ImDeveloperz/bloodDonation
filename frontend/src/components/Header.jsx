@@ -4,11 +4,42 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
+const sections = ['home', 'services', 'testimonials', 'how', 'contact'];
+
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
   const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let current = '';
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (window.scrollY >= offsetTop - 80 && window.scrollY < offsetTop + offsetHeight - 80) {
+            current = section;
+          }
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // run once on mount
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const linkClass = (section) =>
+    activeSection === section
+      ? 'text-red-500 hover:text-red-600 transition'
+      : 'text-gray-800 hover:text-red-500 transition';
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -29,7 +60,7 @@ export default function Header() {
       className="w-full fixed z-20 top-0"
     >
       {/* Outer box to hold the rounded header */}
-      <div className="bg-white shadow-lg rounded-xl mx-4 mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
+      <div className="bg-white shadow-lg rounded-xl mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <img
@@ -41,19 +72,19 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-10 font-medium text-sm lg:text-base">
-          <a href="#about" className="text-red-500 hover:text-red-600 transition">
-            About us
+          <a href="#home" className={linkClass('home')}>
+            Home
           </a>
-          <a href="#services" className="text-gray-800 hover:text-red-500 transition">
+          <a href="#services" className={linkClass('services')}>
             Services
           </a>
-          <a href="#testimonials" className="text-gray-800 hover:text-red-500 transition">
+          <a href="#testimonials" className={linkClass('testimonials')}>
             Testimonials
           </a>
-          <a href="#how" className="text-gray-800 hover:text-red-500 transition">
+          <a href="#how" className={linkClass('how')}>
             How it works
           </a>
-          <a href="#contact" className="text-gray-800 hover:text-red-500 transition">
+          <a href="#contact" className={linkClass('contact')}>
             Contact
           </a>
         </nav>

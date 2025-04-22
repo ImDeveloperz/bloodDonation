@@ -14,7 +14,7 @@ export default function HeroSection() {
   }, [animateCount]);
   
   return (
-    <section className="relative overflow-hidden pt-28 md:pt-36 px-4 sm:px-6 md:px-20 py-12">
+    <section id="home" className="relative overflow-hidden pt-28 md:pt-36 px-4 sm:px-6 md:px-20 py-12">
       {/* Animated Circles */}
       <div className="absolute -z-10 top-0 left-0 w-full h-full">
         <div className={`absolute top-20 left-20 w-64 h-64 rounded-full bg-red-100 opacity-20 blur-3xl transition-all duration-1000 ${animateCount === 0 ? 'scale-110' : 'scale-100'}`}></div>
