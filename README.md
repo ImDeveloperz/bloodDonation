@@ -63,8 +63,8 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 
 ## 1. Clone the Repository
 
-- git clone https://github.com/your-username/neuralink.git
-- cd neuralink
+- git clone https://github.com/your-username/lifelink.git
+- cd bloodDonation
 
 ## 2. Set Up and Run the Backend (FastAPI)
 
@@ -87,8 +87,8 @@ c. Run the FastAPI server
 ✅ Optional: Run the Backend with Docker
 Make sure Docker is installed and running.
 
-- docker build -t neuralink-backend .
-- docker run -p 8000:8000 neuralink-backend
+- docker build -t lifelink-backend .
+- docker run -p 8000:8000 lifelink-backend
 
 ## 3. Set Up and Run the Frontend (Next.js)
 
