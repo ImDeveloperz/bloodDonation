@@ -56,3 +56,51 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 ---
 
 > 🏆 Lifelink isn't just a tool – it's a step toward smarter, data-driven blood donation systems that **save lives**. Let's revolutionize healthcare, one drop at a time. ❤️
+
+# 🚀 Installation Instructions
+
+---
+
+## 1. Clone the Repository
+
+- git clone https://github.com/your-username/neuralink.git
+- cd neuralink
+
+## 2. Set Up and Run the Backend (FastAPI)
+
+a. Create a virtual environment and activate it
+- cd backend
+- python -m venv venv
+
+On Windows
+- venv\Scripts\activate
+
+On macOS/Linux
+- source venv/bin/activate
+
+b. Install the dependencies
+- pip install -r requirements.txt
+
+c. Run the FastAPI server
+- uvicorn main:app --reload
+
+✅ Optional: Run the Backend with Docker
+Make sure Docker is installed and running.
+
+- docker build -t neuralink-backend .
+- docker run -p 8000:8000 neuralink-backend
+
+## 3. Set Up and Run the Frontend (Next.js)
+
+- cd frontend
+- npm install
+- npm run dev
+
+
+---
+
+# Usage Guide
+
+---
+
+
