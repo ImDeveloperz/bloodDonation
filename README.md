@@ -1,4 +1,4 @@
-# 🧠 Neuralink - Revolutionizing Blood Donation with AI 💉
+# 🩸 Neuralink - Revolutionizing Blood Donation with AI 💉
 
 Welcome to **Neuralink** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, Neuralink combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
 
