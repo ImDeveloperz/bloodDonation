@@ -1,5 +1,6 @@
 import { FaLinkedinIn, FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { Droplet, Phone, Mail, MapPin } from 'lucide-react';
+import WhiteLogo from './utils/WhiteLogo';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="relative inline-block">
               <div className="relative inline-block">
-              <img src="/logoDark.png" alt="LifeLinkAi logo" className="h-16 w-56 relative z-10" />
+                <WhiteLogo/>
             </div>
             </div>
             

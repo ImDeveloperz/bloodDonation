@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
+import BlackLogo from "./utils/BlackLogo";
 const sections = ['home', 'services', 'testimonials', 'how', 'contact'];
 
 
@@ -62,13 +63,7 @@ export default function Header() {
       {/* Outer box to hold the rounded header */}
       <div className="bg-white shadow-lg rounded-xl mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
         {/* Logo */}
-        <div className="flex items-center">
-          <img
-            src="/logo.png"
-            alt="LifeLinkAi Logo"
-            className="h-12 sm:h-14 md:h-16 w-auto ml-0 sm:ml-4 md:ml-16 transition-transform duration-300 hover:scale-105"
-          />
-        </div>
+        <BlackLogo/>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4 lg:space-x-10 font-medium text-sm lg:text-base">

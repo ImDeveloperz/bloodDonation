@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import BlackLogo from "./utils/BlackLogo";
 
 export default function HeaderAfterAuth() {
   const router = useRouter();
@@ -40,15 +41,9 @@ export default function HeaderAfterAuth() {
 
   return (
     <header ref={navRef} className="w-full fixed z-30 top-0">
-      <div className="bg-white shadow-lg rounded-xl mx-4 mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
+      <div className="bg-white shadow-lg rounded-xl mt-4 max-w-[1400px] px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between backdrop-blur-sm bg-opacity-95 border border-gray-200 mx-auto">
         {/* Logo */}
-        <div className="flex items-center shrink-0">
-          <img
-            src="/logo.png"
-            alt="LifeLinkAi Logo"
-            className="h-10 sm:h-12 md:h-14 w-auto ml-0 sm:ml-4 transition-transform duration-300 hover:scale-105"
-          />
-        </div>
+        <BlackLogo   />
 
         {/* Desktop Nav + Logout */}
         <div className="hidden md:flex items-center justify-end flex-nowrap gap-2 lg:gap-6 ml-auto">
