@@ -97,8 +97,6 @@ Make sure Docker is installed and running.
 - npm run dev
 
 
----
-
 # Usage Guide
 
 ---
