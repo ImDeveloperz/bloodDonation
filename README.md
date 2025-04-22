@@ -97,8 +97,50 @@ Make sure Docker is installed and running.
 - npm run dev
 
 
-# Usage Guide
+# 📘 Usage Guide
 
 ---
 
+## 🏠 Home Page Navigation
+The landing page consists of five key sections:
 
+- Home – Introduction and overview.
+- Services – Highlights Lifelink’s capabilities.
+- Testimonials – Real user stories and feedback.
+- How it Works – Quick walkthrough of the system.
+- Contact – Get in touch with the team.
+
+## 🩸 Chatbot Access
+At the bottom-right of the screen, you'll see a blood drop icon. Click it to open the AI-powered chatbot and ask questions like:
+
+- “How to donate?”
+- “Blood centers in my city?”
+
+Get real-time, accurate, and helpful responses powered by our custom-trained AI model.
+
+## 🔐 Hospital Portal Access
+
+Hospitals can securely log in by clicking the Login button at the top-right of the navigation bar.
+Use the following test credentials:
+
+- Email: xyz@gmail.com  
+- Password: abc123
+
+Once logged in, hospitals can:
+
+🧾 View Donor List: See all recorded donor information.
+
+🧠 Predict Donor Return: Click the Predict button to see which donors are likely to return and which are not.
+
+📬 Notify Donors:
+- Likely to Return: Send encouragement and reminders.
+- Not Likely to Return: Send awareness messages to re-engage them.
+
+## ➕ Donor Management
+Hospitals can also:
+
+**Add a New Donor** – Quickly register a new donor to the database.
+
+**Add a Donation** – Log a donation event for an already recorded donor.
+
+This ensures records are kept up-to-date and insights remain accurate for future predictions.
