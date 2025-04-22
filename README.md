@@ -161,7 +161,7 @@ This project was developed by a passionate team of innovators. We thank everyone
 
 - Yahya ERRAME – AI & Backend Developer
 - Mohamed RIFAI – AI & Backend Developer
-- Zakariae ZEMAT - Front-end developer
+- Zakariae ZEMAT - Frontend developer
 - Zouhair TOUFANI - FullStack developer
 
 🙏 Special thanks to GDSC EMSI for organizing the OpportunAI Hackathon, which inspired and empowered the creation of this solution.
