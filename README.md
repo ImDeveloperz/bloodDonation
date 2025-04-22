@@ -19,6 +19,14 @@ Lifelink is an **AI-powered web application** designed to:
 
 ---
 
+## 🌐 Application URL
+
+You can access the live Lifelink application here:
+
+https://blood-donation-rosy-eight.vercel.app/
+
+---
+
 ## 🧩 Key Features
 
 ### 🤖 AI Chatbot
@@ -144,3 +152,18 @@ Hospitals can also:
 **Add a Donation** – Log a donation event for an already recorded donor.
 
 This ensures records are kept up-to-date and insights remain accurate for future predictions.
+
+# 👥 Contributor Credits
+
+---
+
+This project was developed by a passionate team of innovators. We thank everyone who contributed to making Lifelink a success:
+
+- Yahya ERRAME – AI & Backend Developer
+- Mohamed RIFAI – AI & Backend Developer
+- Zakaria ZEMAR - Front-end developer
+- Zouhair TOUFANI - FullStack developer
+
+🙏 Special thanks to GDSC EMSI for organizing the OpportunAI Hackathon, which inspired and empowered the creation of this solution.
+
+
