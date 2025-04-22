@@ -94,7 +94,7 @@ const DonorPredictionList = ({ donors }) => {
     setLoading(true);
     const samples = donorList.map(computeFeatures);
     try {
-      const res = await fetch("https://backendblooddonation.fly.dev/predict", {
+      const res = await fetch("https://backprojectlifelinkai.fly.dev/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ samples }),
@@ -124,7 +124,7 @@ const DonorPredictionList = ({ donors }) => {
 
     try {
       for (const donor of targets) {
-        await fetch("https://backendblooddonation.fly.dev/send-email", {
+        await fetch("https://backprojectlifelinkai.fly.dev/send-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
