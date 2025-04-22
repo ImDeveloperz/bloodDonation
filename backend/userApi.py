@@ -206,3 +206,39 @@ async def add_or_update_donor(donor: dict):
             "message": "New donor added.",
             "donor_id": new_id
         }
+
+
+
+# ------------------------- Route: Check if a donnation too recent (< 3 Months) or not if not then he can donate and we will add one to the frequence(number of donations) -------------------------
+
+
+@router.post("/donors/{donor_id}/check-donation")
+async def check_and_update_frequency(donor_id: str):
+    donors_ref = db.reference("donors")
+    donor = donors_ref.child(donor_id).get()
+
+    if not donor:
+        raise HTTPException(status_code=404, detail="Donor not found")
+
+    last_donation_date_str = donor.get("last_donation_date")
+    if not last_donation_date_str:
+        return {"message": "No donation date found", "frequence": donor.get("frequence", 0)}
+
+    # Parse the last donation date
+    try:
+        last_donation_date = datetime.strptime(last_donation_date_str, "%Y-%m-%d")
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid donation date format")
+
+    six_months_ago = datetime.now() - timedelta(days=3 * 30)  # Approximation
+    if last_donation_date <= six_months_ago:
+        # Update the frequency
+        current_freq = donor.get("frequence", 0)
+        donor["frequence"] = current_freq + 1
+        donors_ref.child(donor_id).update({
+            "frequence": donor["frequence"],
+            "last_donation_date": datetime.now().strftime("%Y-%m-%d")  # Optionally update last date
+        })
+        return {"message": "Donation frequency updated", "frequence": donor["frequence"]}
+    else:
+        return {"message": "Donation too recent", "frequence": donor.get("frequence", 0)}
