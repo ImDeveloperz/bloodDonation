@@ -1,7 +1,5 @@
 # OVERVIEW
 
----
-
 # 🩸 Lifelink - Revolutionizing Blood Donation with AI 💉
 
 Welcome to **Lifelink** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, Lifelink combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
