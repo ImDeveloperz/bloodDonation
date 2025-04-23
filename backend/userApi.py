@@ -230,8 +230,8 @@ async def check_and_update_frequency(donor_id: str):
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid donation date format")
 
-    six_months_ago = datetime.now() - timedelta(days=3 * 30)  # Approximation
-    if last_donation_date <= six_months_ago:
+    three_months_ago = datetime.now() - timedelta(days=3 * 30)  # Approximation
+    if last_donation_date <= three_months_ago:
         # Update the frequency
         current_freq = donor.get("frequence", 0)
         donor["frequence"] = current_freq + 1
