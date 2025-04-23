@@ -2,15 +2,15 @@
 
 
 
-# 🩸 Lifelink - Revolutionizing Blood Donation with AI 💉
+# 🩸 LifelinkAi - Revolutionizing Blood Donation with AI 💉
 
-Welcome to **Lifelink** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, Lifelink combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
+Welcome to **LifelinkAi** – a cutting-edge software solution that harnesses the power of **Artificial Intelligence** and **modern web technologies** to revolutionize the blood donation experience for both donors and hospitals. Built with **Next.js** for the frontend and **FastAPI** for the backend, LifelinkAi combines **predictive modeling**, **natural language understanding**, and **intelligent interfaces** into one seamless platform. 🚀
 
 ---
 
-## 🌟 What is Lifelink?
+## 🌟 What is LifelinkAi?
 
-Lifelink is an **AI-powered web application** designed to:
+LifelinkAi is an **AI-powered web application** designed to:
 
 - 🗣️ Answer user questions about blood donation through an intelligent **chatbot**.
 - 📍 Help users find the **nearest hospitals** for donation, based on their chosen location.
@@ -21,7 +21,7 @@ Lifelink is an **AI-powered web application** designed to:
 
 ## 🌐 Application URL
 
-You can access the live Lifelink application here:
+You can access the live LifelinkAi application here:
 
 https://blood-donation-rosy-eight.vercel.app/
 
@@ -42,19 +42,19 @@ Hospitals have a dedicated login system where they can:
 
 ### 📈 Predictive Analytics
 
-Using features like **recency**, **frequency**, and **engagement time**, Lifelink forecasts the **likelihood of donor return** — helping hospitals estimate upcoming blood supply more effectively than ever. 💡💉📆
+Using features like **recency**, **frequency**, and **engagement time**, LifelinkAi forecasts the **likelihood of donor return** — helping hospitals estimate upcoming blood supply more effectively than ever. 💡💉📆
 
 ### 🌐 Beautiful UI with Next.js
 
 The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and hospitals an intuitive experience:
 
-- 🏠 **Home**: Info about Lifelink, blood donation, and how to get in touch  
+- 🏠 **Home**: Info about LifelinkAi, blood donation, and how to get in touch  
 - 🤖 **Embedded chatbot** for instant answers  
 - 🔑 **Login system** for hospitals
 
 ---
 
-## 💡 Why Lifelink?
+## 💡 Why LifelinkAi?
 
 - ✅ Enhances **donor engagement** with smart conversational AI  
 - ✅ Supports hospitals in **managing and predicting blood stocks**  
@@ -63,7 +63,7 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 
 ---
 
-> 🏆 Lifelink isn't just a tool – it's a step toward smarter, data-driven blood donation systems that **save lives**. Let's revolutionize healthcare, one drop at a time. ❤️
+> 🏆 LifelinkAi isn't just a tool – it's a step toward smarter, data-driven blood donation systems that **save lives**. Let's revolutionize healthcare, one drop at a time. ❤️
 
 # 🚀 Installation Instructions
 
@@ -102,8 +102,8 @@ uvicorn main:app --reload
 ✅ Optional: Run the Backend with Docker
 Make sure Docker is installed and running.
 ```
-docker build -t lifelink-backend .
-docker run -p 8000:8000 lifelink-backend
+docker build -t LifelinkAi-backend .
+docker run -p 8000:8000 LifelinkAi-backend
 ```
 
 ## 3. Set Up and Run the Frontend (Next.js)
@@ -121,7 +121,7 @@ npm run dev
 The landing page consists of five key sections:
 
 - Home – Introduction and overview.
-- Services – Highlights Lifelink’s capabilities.
+- Services – Highlights LifelinkAi’s capabilities.
 - Testimonials – Real user stories and feedback.
 - How it Works – Quick walkthrough of the system.
 - Contact – Get in touch with the team.
@@ -165,7 +165,7 @@ This ensures records are kept up-to-date and insights remain accurate for future
 
 ---
 
-This project was developed by a passionate team of innovators. We thank everyone who contributed to making Lifelink a success:
+This project was developed by a passionate team of innovators. We thank everyone who contributed to making LifelinkAi a success:
 
 - Yahya ERRAME – AI & Backend Developer
 - Mohamed RIFAI – AI & Backend Developer
