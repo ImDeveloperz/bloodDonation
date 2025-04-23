@@ -139,8 +139,8 @@ Get real-time, accurate, and helpful responses powered by our custom-trained AI 
 Hospitals can securely log in by clicking the Login button at the top-right of the navigation bar.
 Use the following test credentials:
 
-- Email: xyz@gmail.com  
-- Password: abc123
+- Email: hospital@gmail.com  
+- Password: 123456
 
 Once logged in, hospitals can:
 
