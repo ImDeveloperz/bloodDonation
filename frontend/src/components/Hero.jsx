@@ -44,11 +44,11 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
             <button className="bg-red-600 hover:bg-red-700 transition-colors text-white px-6 py-3 rounded-md text-base sm:text-lg font-medium shadow-lg flex items-center gap-2 group w-full sm:w-auto">
               <Heart className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              <span>Become a Donor</span>
+              <a href="#contact">Become a Donor</a>
             </button>
             
             <button className="bg-white border-2 border-red-600 text-red-600 hover:bg-red-50 transition-colors px-6 py-3 rounded-md text-base sm:text-lg font-medium flex items-center gap-2 w-full sm:w-auto">
-              Learn More
+              <a href="#services">Learn More</a>
             </button>
           </div>
           

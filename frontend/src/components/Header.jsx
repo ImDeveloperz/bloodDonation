@@ -76,7 +76,7 @@ export default function Header() {
           <a href="#testimonials" className={linkClass('testimonials')}>
             Testimonials
           </a>
-          <a href="#how" className={linkClass('how')}>
+          <a href="#howitworks" className={linkClass('howitworks')}>
             How it works
           </a>
           <a href="#contact" className={linkClass('contact')}>

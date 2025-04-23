@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from 'react';
-import { ArrowRight, Droplet, MapPin, Bell, Hospital, Clock, AlertCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, MapPin, LineChart, Hospital, BarChart, Activity } from 'lucide-react';
 
 export default function Services() {
   const [activeCard, setActiveCard] = useState(null);
@@ -24,17 +24,17 @@ export default function Services() {
   
   const services = [
     {
-      title: 'Donor-Patient Matching',
-      description: 'Our AI-powered matching system connects donors with patients in need based on blood type, location, and urgency.',
-      icon: <Droplet className="w-5 h-5 md:w-6 md:h-6" />,
-      image: '/bdmatching.png',
+      title: 'AI Chatbot Assistance',
+      description: 'Get immediate answers to all your blood donation questions through our intelligent ML-powered chatbot.',
+      icon: <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />,
+      image: '/bot.png',
       bg: 'bg-gradient-to-br from-gray-100 to-gray-200',
       tagBg: 'bg-red-500',
       textColor: 'text-white'
     },
     {
-      title: 'Interactive Donor Map',
-      description: 'Visualize donation centers and blood needs in your area with our real-time interactive map.',
+      title: 'Nearest Hospital Finder',
+      description: 'Locate the closest blood donation centers based on your current location with our smart mapping system.',
       icon: <MapPin className="w-5 h-5 md:w-6 md:h-6" />,
       image: '/bdmap.png',
       bg: 'bg-gradient-to-br from-red-500 to-red-600',
@@ -42,37 +42,37 @@ export default function Services() {
       textColor: 'text-red-500'
     },
     {
-      title: 'Automated Notifications',
-      description: 'Stay informed with timely alerts about donation opportunities, appointment reminders, and thank-you messages.',
-      icon: <Bell className="w-5 h-5 md:w-6 md:h-6" />,
-      image: '/bdnotif.png',
+      title: 'Donor Return Prediction',
+      description: 'Hospitals can forecast donor return likelihood using our XGBoost-based predictive analytics model.',
+      icon: <BarChart className="w-5 h-5 md:w-6 md:h-6" />,
+      image: '/bdreq.png',
       bg: 'bg-gradient-to-br from-gray-900 to-black',
       tagBg: 'bg-red-500',
       textColor: 'text-white'
     },
     {
-      title: 'Hospital Blood Requests',
-      description: 'Hospitals can submit urgent blood requests directly through our platform to reach nearby eligible donors.',
+      title: 'Hospital Donor Management',
+      description: 'Secure portal for hospitals to log in, add new donor information, and manage existing donor records.',
       icon: <Hospital className="w-5 h-5 md:w-6 md:h-6" />,
-      image: '/bdreq.png',
+      image: '/bdmatching.png',
       bg: 'bg-gradient-to-br from-gray-100 to-gray-200',
       tagBg: 'bg-red-500',
       textColor: 'text-white'
     },
     {
-      title: 'Donation History Tracking',
-      description: 'Donors can view their complete donation history, impact statistics, and eligibility status for future donations.',
-      icon: <Clock className="w-5 h-5 md:w-6 md:h-6" />,
-      image: '/bdh.png',
+      title: 'Blood Stock Forecasting',
+      description: 'Advanced analytics to help donation centers predict and manage their blood supply levels efficiently.',
+      icon: <LineChart className="w-5 h-5 md:w-6 md:h-6" />,
+      image: '/bdfor.png',
       bg: 'bg-gradient-to-br from-red-500 to-red-600',
       tagBg: 'bg-black',
       textColor: 'text-white'
     },
     {
-      title: 'Availability Alerts',
-      description: 'Get instant notifications when your blood type is urgently needed in your area or at specific hospitals.',
-      icon: <AlertCircle className="w-5 h-5 md:w-6 md:h-6" />,
-      image: '/bdalert.png',
+      title: 'Donor Engagement Analytics',
+      description: 'Track donor recency, frequency, and engagement time to optimize blood donation campaigns and outreach.',
+      icon: <Activity className="w-5 h-5 md:w-6 md:h-6" />,
+      image: '/bdana.png',
       bg: 'bg-gradient-to-br from-gray-900 to-black',
       tagBg: 'bg-red-500',
       textColor: 'text-white'
