@@ -38,7 +38,7 @@ Ask anything about blood donation! Whether you're wondering _"Does it hurt?"_ or
 Hospitals have a dedicated login system where they can:
 - 🔐 Securely log in to their account  
 - ➕ Add new donor information  
-- 🔍 Predict if a donor will return to donate on a given date using an **XGBoost-based predictive model**
+- 🔍 Predict if a donor will return to donate using an **XGBoost-based predictive model**
 
 ### 📈 Predictive Analytics
 
