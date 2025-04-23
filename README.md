@@ -71,39 +71,45 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 
 ## 1. Clone the Repository
 
-- git clone https://github.com/your-username/lifelink.git
-- cd bloodDonation
+''' git clone https://github.com/your-username/lifelink.git '''
+cd bloodDonation
 
 ## 2. Set Up and Run the Backend (FastAPI)
 
 a. Create a virtual environment and activate it
-- cd backend
-- python -m venv venv
+```
+cd backend
+python -m venv venv
+```
 
-On Windows
-- venv\Scripts\activate
+```
+venv\Scripts\activate # On Windows
 
-On macOS/Linux
-- source venv/bin/activate
+source venv/bin/activate # On macOS/Linux
+```
 
 b. Install the dependencies
-- pip install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 c. Run the FastAPI server
-- uvicorn main:app --reload
+```
+uvicorn main:app --reload
+```
 
 ✅ Optional: Run the Backend with Docker
 Make sure Docker is installed and running.
-
-- docker build -t lifelink-backend .
-- docker run -p 8000:8000 lifelink-backend
+```
+docker build -t lifelink-backend .
+docker run -p 8000:8000 lifelink-backend
+```
 
 ## 3. Set Up and Run the Frontend (Next.js)
-
-- cd frontend
-- npm install
-- npm run dev
-
+```
+cd frontend
+npm install
+npm run dev
+```
 
 # 📘 Usage Guide
 
