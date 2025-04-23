@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "LinkLifeAI",
+  title: "LifeLinkAi",
   description: "Blood donation platform",
   icons: {
     icon: [
