@@ -70,9 +70,11 @@ The frontend is smooth, modern, and lightning-fast ⚡, giving both donors and h
 ---
 
 ## 1. Clone the Repository
-
-''' git clone https://github.com/your-username/lifelink.git '''
+```
+git clone https://github.com/ImDeveloperz/bloodDonation.git 
 cd bloodDonation
+```
+
 
 ## 2. Set Up and Run the Backend (FastAPI)
 
